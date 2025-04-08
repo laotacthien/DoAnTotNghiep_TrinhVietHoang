@@ -13,6 +13,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private Transform groundCheck;
 
+    [SerializeField] private LayerMask wallLayer;
+    [SerializeField] private Transform wallCheck;
+    
     //lật player  
     //private SpriteRenderer spriteRenderer;
 
@@ -30,6 +33,17 @@ public class PlayerController : MonoBehaviour
     private bool isDashing = false;
     public float dashTime = 0.1f;
     private bool turnRight;   //để lấy hướng Dash
+
+    //Wallslide và WallJump
+    private bool isWallSliding;
+    private float wallSlidingSpeed = 2f;
+
+    private bool isWallJumping;
+    private float wallJumpingDirection;  //hướng nhảy tường
+    private float wallJumpingTime = 0.2f;  //thời gian nhảy tường
+    private float wallJumpingCounter;  //bộ đếm nhảy tường
+    private float wallJumpingDuration = 0.4f;
+    private Vector2 wallJumpingPower = new Vector2(8f, 16f);  //lực nhảy
 
     //Năng lượng
     public int playermaxEnergy = 100;
@@ -60,6 +74,9 @@ public class PlayerController : MonoBehaviour
         HandleJump();
         UpdateAnimation();
         Dash();
+
+        WallSlide();
+        WallJump();
 
         //Tấn công
         //if (Input.GetKeyDown(KeyCode.J) && canAttack) // Nhấn J để tấn công
@@ -138,7 +155,7 @@ public class PlayerController : MonoBehaviour
     {
         float moveInput = Input.GetAxis("Horizontal");
 
-        if (!isDashing)
+        if (!isDashing && !isWallJumping)
         {
             rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
 
@@ -202,12 +219,69 @@ public class PlayerController : MonoBehaviour
         isDashing= false;
     }
 
+    private bool IsWalled()  //kiểm tra chạm tường
+    {
+        return Physics2D.OverlapCircle(wallCheck.position, 0.2f, wallLayer);
+    }
+
+    private void WallSlide()
+    {
+        if(IsWalled() && !isGrounded && Input.GetAxisRaw("Horizontal") != 0)
+        {
+            isWallSliding = true;
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, Mathf.Clamp(rb.linearVelocity.y, -wallSlidingSpeed, float.MaxValue));
+        }
+        else
+        {
+            isWallSliding = false;
+        }
+    }
+
+    private void WallJump()
+    {
+        if(isWallSliding)
+        {
+            isWallJumping = false;
+            wallJumpingDirection = -transform.localScale.x;
+            wallJumpingCounter = wallJumpingTime;
+
+            CancelInvoke(nameof(StopWallJumping));
+        }
+        else
+        {
+            wallJumpingCounter -= Time.deltaTime;
+        }
+
+        if(Input.GetButtonDown("Jump") && wallJumpingCounter > 0)
+        {
+            isWallJumping = true;
+            rb.linearVelocity = new Vector2(wallJumpingDirection * wallJumpingPower.x, wallJumpingPower.y);
+            wallJumpingCounter = 0f;
+
+            if(transform.localScale.x != wallJumpingDirection)
+            {
+                turnRight = !turnRight;
+                Vector3 localScale = transform.localScale;
+                localScale *= -1f;
+                transform.localScale = localScale;
+            }
+
+            Invoke(nameof(StopWallJumping), wallJumpingDuration);
+        }
+    }
+    private void StopWallJumping()
+    {
+        isWallJumping = false;
+    }
+
     private void UpdateAnimation()
     {
         bool isRunning = Mathf.Abs(rb.linearVelocity.x) > 0.1f;
         bool isJumping = !isGrounded;
+        
         animator.SetBool("isRunning", isRunning);
         animator.SetBool("isJumping", isJumping);
+        animator.SetBool("isWallSliding", isWallSliding);
     }
 
     public void HealEnergy(int amount)
