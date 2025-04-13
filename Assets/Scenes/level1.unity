@@ -3823,7 +3823,9 @@ MonoBehaviour:
     m_Bits: 1088
   wallCheck: {fileID: 294891498}
   dashForce: 40
-  dashTime: 0.1
+  dashTime: 0.2
+  afterImagePrefab: {fileID: 5310135549799318502, guid: fdbaa8cd7a29db640af020a66d1dad05, type: 3}
+  afterImageInterval: 0.03
   playermaxEnergy: 100
   energyBar: {fileID: 20805937}
 --- !u!95 &1749145423

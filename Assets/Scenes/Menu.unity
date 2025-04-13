@@ -176,7 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: LEVELS
+  m_text: Man choi
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4bd44612e8abd53479beadd56741e3b5, type: 2}
   m_sharedMaterial: {fileID: 8064454358381281509, guid: 4bd44612e8abd53479beadd56741e3b5, type: 2}
@@ -312,7 +312,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Level 3
+  m_text: Man 3
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4bd44612e8abd53479beadd56741e3b5, type: 2}
   m_sharedMaterial: {fileID: 8064454358381281509, guid: 4bd44612e8abd53479beadd56741e3b5, type: 2}
@@ -562,7 +562,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 540, y: 58}
+  m_AnchoredPosition: {x: 540, y: 11}
   m_SizeDelta: {x: 293.23, y: 131.97}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &491066306
@@ -716,7 +716,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Levels
+  m_text: Mam choi
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4bd44612e8abd53479beadd56741e3b5, type: 2}
   m_sharedMaterial: {fileID: 8064454358381281509, guid: 4bd44612e8abd53479beadd56741e3b5, type: 2}
@@ -1098,7 +1098,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Play
+  m_text: Choi
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4bd44612e8abd53479beadd56741e3b5, type: 2}
   m_sharedMaterial: {fileID: 8064454358381281509, guid: 4bd44612e8abd53479beadd56741e3b5, type: 2}
@@ -1352,7 +1352,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Level 2
+  m_text: Man 2
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4bd44612e8abd53479beadd56741e3b5, type: 2}
   m_sharedMaterial: {fileID: 8064454358381281509, guid: 4bd44612e8abd53479beadd56741e3b5, type: 2}
@@ -1467,7 +1467,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 540, y: -309}
+  m_AnchoredPosition: {x: 540, y: -356}
   m_SizeDelta: {x: 293.23, y: 131.97}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1127249049
@@ -1621,7 +1621,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Level 1
+  m_text: Man 1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4bd44612e8abd53479beadd56741e3b5, type: 2}
   m_sharedMaterial: {fileID: 8064454358381281509, guid: 4bd44612e8abd53479beadd56741e3b5, type: 2}
@@ -2097,7 +2097,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Swords D'Arc
+  m_text: Thu Kiem Truong An
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c582d7964891cf741a5cf71de4d206cb, type: 2}
   m_sharedMaterial: {fileID: 67015186695565837, guid: c582d7964891cf741a5cf71de4d206cb, type: 2}
@@ -2345,8 +2345,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 540, y: -126}
-  m_SizeDelta: {x: 293.23, y: 131.97}
+  m_AnchoredPosition: {x: 561.99, y: -173}
+  m_SizeDelta: {x: 337.2, y: 131.97}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2108493679
 MonoBehaviour:
@@ -2499,7 +2499,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Quit
+  m_text: Thoat
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4bd44612e8abd53479beadd56741e3b5, type: 2}
   m_sharedMaterial: {fileID: 8064454358381281509, guid: 4bd44612e8abd53479beadd56741e3b5, type: 2}

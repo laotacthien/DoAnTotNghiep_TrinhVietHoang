@@ -31,8 +31,13 @@ public class PlayerController : MonoBehaviour
     //Dash
     public float dashForce = 20f;
     private bool isDashing = false;
-    public float dashTime = 0.1f;
+    public float dashTime = 0.2f;
     private bool turnRight;   //để lấy hướng Dash
+
+    public GameObject afterImagePrefab; // gắn trong Inspector
+    public float afterImageInterval = 0.03f; // tần suất tạo tàn ảnh
+    private float afterImageTimer = 0f;
+
 
     //Wallslide và WallJump
     private bool isWallSliding;
@@ -73,7 +78,30 @@ public class PlayerController : MonoBehaviour
         HandleMovement();
         HandleJump();
         UpdateAnimation();
+
         Dash();
+
+        // Nếu đang Dash thì tạo tàn ảnh định kỳ
+        if (isDashing)
+        {
+            afterImageTimer -= Time.deltaTime;
+            if (afterImageTimer <= 0f)
+            {
+                CreateAfterImage();
+                afterImageTimer = afterImageInterval;
+            }
+        }
+
+        //Nếu đang Wall jump thì tạo tàn ảnh định kỳ
+        if (isWallJumping)
+        {
+            afterImageTimer -= Time.deltaTime;
+            if (afterImageTimer <= 0f)
+            {
+                CreateAfterImage();
+                afterImageTimer = afterImageInterval;
+            }
+        }
 
         WallSlide();
         WallJump();
@@ -97,26 +125,26 @@ public class PlayerController : MonoBehaviour
     //{
     //    canAttack = false;  // Tắt khả năng tấn công liên tục
     //    lastAttackTime = Time.time;
-     //   comboStep++;
+    //   comboStep++;
 
-        // Giới hạn combo tối đa (có 3 đòn chém)
+    // Giới hạn combo tối đa (có 3 đòn chém)
     //    if (comboStep > 3) comboStep = 1;
 
-        // Kích hoạt animation tương ứng
-        //animator.SetTrigger("Attack" + comboStep);
+    // Kích hoạt animation tương ứng
+    //animator.SetTrigger("Attack" + comboStep);
 
-        
+
     //    animator.SetTrigger("Attack");
-     //   animator.SetInteger("ComboStep", comboStep); // Điều chỉnh Animator
+    //   animator.SetInteger("ComboStep", comboStep); // Điều chỉnh Animator
 
-     //   Debug.Log($"Thực hiện chém {comboStep}");
+    //   Debug.Log($"Thực hiện chém {comboStep}");
 
-        // Kiểm tra va chạm với kẻ địch
-        //Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
-        //foreach (Collider2D enemy in hitEnemies)
-        //{
-            //enemy.GetComponent<EnemyHealth>().TakeDamage(attackDamage);
-        //}
+    // Kiểm tra va chạm với kẻ địch
+    //Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+    //foreach (Collider2D enemy in hitEnemies)
+    //{
+    //enemy.GetComponent<EnemyHealth>().TakeDamage(attackDamage);
+    //}
     //}
 
     // Animation Event gọi hàm này khi animation gần kết thúc
@@ -131,14 +159,14 @@ public class PlayerController : MonoBehaviour
     // Animation Event gọi hàm này ở frame cuối cùng để reset combo
     // void ResetCombo()
     //{
-     //   comboStep = 0; // Reset về trạng thái ban đầu
-     //   canAttack = true;
+    //   comboStep = 0; // Reset về trạng thái ban đầu
+    //   canAttack = true;
 
     //    animator.ResetTrigger("Attack");
 
-        //animator.ResetTrigger("Attack1");
-        //animator.ResetTrigger("Attack2");
-        //animator.ResetTrigger("Attack3"); // Reset trigger để tránh kẹt animation
+    //animator.ResetTrigger("Attack1");
+    //animator.ResetTrigger("Attack2");
+    //animator.ResetTrigger("Attack3"); // Reset trigger để tránh kẹt animation
 
     //    Debug.Log("ResetCombo() được gọi - Reset về trạng thái ban đầu");
 
@@ -146,7 +174,7 @@ public class PlayerController : MonoBehaviour
 
     //void OnDrawGizmosSelected()
     //{
-     //   if (attackPoint == null) return;
+    //   if (attackPoint == null) return;
     //    Gizmos.color = Color.red;
     //    Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     //}
@@ -195,7 +223,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.K)) // Nhấn K để dash
         {
-            currentPlayerEnergy -= 10;
+            currentPlayerEnergy -= 1;
             energyBar.UpdateEnergyBar(currentPlayerEnergy, playermaxEnergy);
 
             if (currentPlayerEnergy < 0)
@@ -207,6 +235,7 @@ public class PlayerController : MonoBehaviour
                 float dashDirection = turnRight ? 1 : -1;  //hướng Dash
                 rb.linearVelocity = new Vector2(dashForce * dashDirection, rb.linearVelocity.y);
                 isDashing = true;
+
                 StartCoroutine(StopDash());
             }
         }
@@ -217,6 +246,26 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(dashTime);
         rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);  //reset lại sau khi dash
         isDashing= false;
+    }
+
+    void CreateAfterImage()
+    {
+        Debug.Log("Tạo tàn ảnh!");
+
+        GameObject clone = Instantiate(afterImagePrefab, transform.position, Quaternion.identity);
+
+        SpriteRenderer cloneSR = clone.GetComponent<SpriteRenderer>();
+        SpriteRenderer playerSR = GetComponent<SpriteRenderer>();
+
+        // Copy sprite và hướng
+        cloneSR.sprite = playerSR.sprite;
+
+        if (turnRight) cloneSR.flipX = false;  //cloneSR.flipX = playerSR.flipX;
+        else cloneSR.flipX = true;
+        cloneSR.sortingOrder = playerSR.sortingOrder - 1; // để tàn ảnh nằm sau
+
+        // Màu mờ
+        cloneSR.color = new Color(1f, 0f, 0f, 1f);
     }
 
     private bool IsWalled()  //kiểm tra chạm tường
@@ -282,6 +331,7 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("isRunning", isRunning);
         animator.SetBool("isJumping", isJumping);
         animator.SetBool("isWallSliding", isWallSliding);
+        animator.SetBool("isDashing", isDashing);
     }
 
     public void HealEnergy(int amount)
