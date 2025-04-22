@@ -31,6 +31,8 @@ public class PlayerAttack : MonoBehaviour
     private Rigidbody2D rb;
 
 
+    private AudioManager audioManager;
+
     // Update is called once per frame
 
     private void Awake()
@@ -38,6 +40,7 @@ public class PlayerAttack : MonoBehaviour
         animator = GetComponent<Animator>();
         gameManager = FindAnyObjectByType<GameManager>();
         rb = GetComponent<Rigidbody2D>(); // Lấy Rigidbody2D của player
+        audioManager = FindAnyObjectByType<AudioManager>();
     }
 
     void Start()
@@ -55,6 +58,7 @@ public class PlayerAttack : MonoBehaviour
         {
             //Debug.Log($"Bấm tấn công - canAttackAgain: {canAttack}");
             // Reset combo nếu không nhấn trong thời gian cho phép
+
             if (Time.time - lastAttackTime > comboResetTime)
             {
                 comboStep = 0;
@@ -76,6 +80,8 @@ public class PlayerAttack : MonoBehaviour
         // Kích hoạt animation tương ứng
         animator.SetTrigger("Attack");
         animator.SetInteger("ComboStep", comboStep); // Điều chỉnh Animator
+
+        audioManager.PlayAttackSound();
 
         Debug.Log($"Thực hiện chém {comboStep}");
     }

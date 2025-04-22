@@ -7,6 +7,11 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip backGroundClip;
     [SerializeField] private AudioClip jumpClip;
     [SerializeField] private AudioClip coinClip;
+    [SerializeField] private AudioClip dashClip;
+    [SerializeField] private AudioClip runClip;
+    [SerializeField] private AudioClip wallJumpClip;
+    [SerializeField] private AudioClip attackClip;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -33,5 +38,21 @@ public class AudioManager : MonoBehaviour
     public void PlayJumpSound()
     {
         effectAudioSource.PlayOneShot(jumpClip);
+    }
+    public void PlayWallJumpSound()
+    {
+        effectAudioSource.PlayOneShot(wallJumpClip);
+    }
+    public void PlayDashSound()
+    {
+        effectAudioSource.PlayOneShot(dashClip);
+    }
+    //public void PlayRunSound()
+    //{
+    //    effectAudioSource.PlayOneShot(runClip);
+    //}
+    public void PlayAttackSound()
+    {
+        effectAudioSource.PlayOneShot(attackClip);
     }
 }

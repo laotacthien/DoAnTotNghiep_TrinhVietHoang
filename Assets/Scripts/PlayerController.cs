@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+//using System.Drawing;
 using System.Linq;
 using Unity.VisualScripting;
 using UnityEditor.Experimental;
@@ -87,7 +88,7 @@ public class PlayerController : MonoBehaviour
             afterImageTimer -= Time.deltaTime;
             if (afterImageTimer <= 0f)
             {
-                CreateAfterImage();
+                CreateAfterImage(new Color(0.5f, 0.8f, 1f, 1f));
                 afterImageTimer = afterImageInterval;
             }
         }
@@ -98,8 +99,8 @@ public class PlayerController : MonoBehaviour
             afterImageTimer -= Time.deltaTime;
             if (afterImageTimer <= 0f)
             {
-                CreateAfterImage();
-                afterImageTimer = afterImageInterval;
+                CreateAfterImage(new Color(1f, 1f, 1f, 0.6f));
+                afterImageTimer = 3 * afterImageInterval;
             }
         }
 
@@ -185,14 +186,18 @@ public class PlayerController : MonoBehaviour
 
         if (!isDashing && !isWallJumping)
         {
+            //audioManager.PlayRunSound();
             rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
 
             if (moveInput > 0)
             {
+                //audioManager.PlayRunSound();
                 transform.localScale = new Vector3(1, 1, 1);   //spriteRenderer.flipX = false; //lật mới
                 turnRight = true;
             }
-            else if (moveInput < 0) {
+            else if (moveInput < 0) 
+            {
+                //audioManager.PlayRunSound();
                 transform.localScale = new Vector3(-1, 1, 1);  //spriteRenderer.flipX= true;
                 turnRight = false;
             }          
@@ -232,6 +237,7 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
+                audioManager.PlayDashSound();
                 float dashDirection = turnRight ? 1 : -1;  //hướng Dash
                 rb.linearVelocity = new Vector2(dashForce * dashDirection, rb.linearVelocity.y);
                 isDashing = true;
@@ -248,24 +254,31 @@ public class PlayerController : MonoBehaviour
         isDashing= false;
     }
 
-    void CreateAfterImage()
+    void CreateAfterImage(Color color)
     {
         Debug.Log("Tạo tàn ảnh!");
 
-        GameObject clone = Instantiate(afterImagePrefab, transform.position, Quaternion.identity);
-
-        SpriteRenderer cloneSR = clone.GetComponent<SpriteRenderer>();
-        SpriteRenderer playerSR = GetComponent<SpriteRenderer>();
+        //GameObject clone = Instantiate(afterImagePrefab, transform.position, Quaternion.identity);
+        //SpriteRenderer cloneSR = clone.GetComponent<SpriteRenderer>();
+        //SpriteRenderer playerSR = GetComponent<SpriteRenderer>();
 
         // Copy sprite và hướng
-        cloneSR.sprite = playerSR.sprite;
+        //cloneSR.sprite = playerSR.sprite;
 
-        if (turnRight) cloneSR.flipX = false;  //cloneSR.flipX = playerSR.flipX;
-        else cloneSR.flipX = true;
-        cloneSR.sortingOrder = playerSR.sortingOrder - 1; // để tàn ảnh nằm sau
+        //if (turnRight) cloneSR.flipX = false;  //cloneSR.flipX = playerSR.flipX;
+        //else cloneSR.flipX = true;
+        //cloneSR.sortingOrder = playerSR.sortingOrder - 1; // để tàn ảnh nằm sau
 
         // Màu mờ
-        cloneSR.color = new Color(1f, 0f, 0f, 1f);
+        //cloneSR.color = new Color(0.5f, 0.8f, 1f, 1f);
+
+        GameObject afterImage = AfterImagePool.Instance.GetFromPool();
+        afterImage.transform.position = transform.position;
+        afterImage.transform.rotation = transform.rotation;
+
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+        afterImage.GetComponent<AfterImage>().SetData(sr.sprite, !turnRight, color);
+
     }
 
     private bool IsWalled()  //kiểm tra chạm tường
@@ -303,6 +316,8 @@ public class PlayerController : MonoBehaviour
 
         if(Input.GetButtonDown("Jump") && wallJumpingCounter > 0)
         {
+            audioManager.PlayWallJumpSound();
+
             isWallJumping = true;
             rb.linearVelocity = new Vector2(wallJumpingDirection * wallJumpingPower.x, wallJumpingPower.y);
             wallJumpingCounter = 0f;
