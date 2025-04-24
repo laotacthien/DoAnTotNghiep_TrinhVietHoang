@@ -2,8 +2,10 @@
 using System.Collections;
 public class EnemyAttack : MonoBehaviour
 {
+    public Transform attackPoint;
     public float attackRange = 1.5f; // Phạm vi tấn công
     public float attackCooldown = 1.5f; // Thời gian giữa mỗi lần tấn công
+
     public Transform player; // Tham chiếu đến Player
     public LayerMask playerLayer; // Lớp để nhận diện Player
     public int enemyDamage = 10; // damage
@@ -28,7 +30,7 @@ public class EnemyAttack : MonoBehaviour
 
     void DetectPlayer()
     {
-        Collider2D playerInRange = Physics2D.OverlapCircle(transform.position, attackRange, playerLayer);
+        Collider2D playerInRange = Physics2D.OverlapCircle(attackPoint.position, attackRange, playerLayer);
 
         if (playerInRange != null && !isAttacking)
         {
@@ -89,6 +91,6 @@ public class EnemyAttack : MonoBehaviour
     {
         Gizmos.color = Color.red;
         // Vẽ phạm vi tấn công trong Scene
-        Gizmos.DrawWireSphere(transform.position, attackRange); 
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange); 
     }
 }

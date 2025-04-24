@@ -6,6 +6,7 @@ public class Enemy : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animator;
 
+    [Header("Patrol Settings")]
     [SerializeField] private float speed = 2f;
     [SerializeField] private float distance = 5f;
 
@@ -16,9 +17,9 @@ public class Enemy : MonoBehaviour
     private UnityEngine.Transform player; //Tham chiếu đến player để tính toán hướng knockback
 
     //Hệ thống máu Enemy
+    [Header("Heal Settings")]
     public int enemymaxHealth = 50;
     private int currentEnemyHealth;
-
     public EnemyHealthBar enemyHealthBar; //goi toi thanh maus enemy
     
 
@@ -51,13 +52,20 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Patrol();
+
+        
+    }
+
+    void Patrol()
+    {
         if (isKnockback) return; // Nếu đang bị knockback, không di chuyển
 
         float leftBound = startPos.x - distance;
         float rightBound = startPos.x + distance;
         if (movingRight)
         {
-            transform.Translate(Vector2.right * speed * Time.deltaTime); 
+            transform.Translate(Vector2.right * speed * Time.deltaTime);
             if (transform.position.x >= rightBound)
             {
                 movingRight = false;
@@ -73,8 +81,6 @@ public class Enemy : MonoBehaviour
                 Flip();
             }
         }
-
-        
     }
 
     void Flip() //Di chuyển lặp lại

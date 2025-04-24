@@ -221,6 +221,25 @@ public class PlayerController : MonoBehaviour
                 doubleJump = false;
             }
         }
+        if (Input.GetKeyDown(KeyCode.LeftControl))
+        {
+            if(isGrounded)
+            {
+                currentPlayerEnergy -= 1;
+                energyBar.UpdateEnergyBar(currentPlayerEnergy, playermaxEnergy);
+
+                if (currentPlayerEnergy < 0)
+                {
+                    return;
+                }
+                else
+                {
+                    audioManager.PlayDashSound();
+                    rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce * 2f);
+                }
+            }
+        }
+
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
     }
 

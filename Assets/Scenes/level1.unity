@@ -1600,7 +1600,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 70.7, y: 23.3, z: -10}
+  m_LocalPosition: {x: -23.17, y: 2.07, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3159,7 +3159,7 @@ Transform:
   m_GameObject: {fileID: 1454815767}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 70.7, y: 23.3, z: -10}
+  m_LocalPosition: {x: -23.17, y: 2.07, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3878,7 +3878,7 @@ Transform:
   m_GameObject: {fileID: 1749145417}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 70.7, y: 23.3, z: 0}
+  m_LocalPosition: {x: -23.17, y: 2.07, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15221,14 +15221,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy2
       objectReference: {fileID: 0}
-    - target: {fileID: 1506817129293889960, guid: 1f49ca540681d204a9155b3ae23dc3ba, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6609395575347522296, guid: 1f49ca540681d204a9155b3ae23dc3ba, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6613722308853161163, guid: 1f49ca540681d204a9155b3ae23dc3ba, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.73
@@ -15277,10 +15269,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8920275674317571784, guid: 1f49ca540681d204a9155b3ae23dc3ba, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1749145421}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 4621464987326062662}
   - component: {fileID: 100391279514259253}
   - component: {fileID: 7847135342981240398}
-  - component: {fileID: 1929078686952179090}
   - component: {fileID: 1058532723276768089}
-  - component: {fileID: 8920275674317571784}
+  - component: {fileID: 5782133698721839364}
+  - component: {fileID: 775331121231137756}
+  - component: {fileID: 2506914894317419988}
   m_Layer: 7
   m_Name: Enemy2 hoanhao
   m_TagString: Enemy
@@ -36,6 +37,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3882548683649157422}
+  - {fileID: 6709640956461913359}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4621464987326062662
@@ -161,24 +163,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.1914368, y: 1.55}
   m_EdgeRadius: 0
---- !u!114 &1929078686952179090
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1506817129293889960}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 142649a7cf6e07f48b0f090d8635be3e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2
-  distance: 5
-  enemymaxHealth: 50
-  enemyHealthBar: {fileID: 6860459671458090093}
-  knockbackForce: 5
-  knockbackDuration: 0.15
 --- !u!50 &1058532723276768089
 Rigidbody2D:
   serializedVersion: 5
@@ -206,7 +190,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &8920275674317571784
+--- !u!114 &5782133698721839364
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -215,16 +199,80 @@ MonoBehaviour:
   m_GameObject: {fileID: 1506817129293889960}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b86ad624437c5a4b8f63697b6db09c8, type: 3}
+  m_Script: {fileID: 11500000, guid: 4a193e0305ff832438193dbac79f00a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRange: 1.8
-  attackCooldown: 1.5
-  player: {fileID: 0}
+  detectionRadius: 5
   playerLayer:
     serializedVersion: 2
     m_Bits: 512
-  enemyDamage: 10
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 1088
+  chaseSpeed: 3
+  stoppingDistance: 1
+  lostTargetTime: 2
+--- !u!114 &775331121231137756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506817129293889960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df9832c88c5519740a50fea3f5297841, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackPoint: {fileID: 6709640956461913359}
+  attackRange: 1.5
+  attackCooldown: 1.5
+  damage: 10
+--- !u!114 &2506914894317419988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506817129293889960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d5328fbaafa36f439de7ea8d847a858, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patrolSpeed: 1.5
+  patrolDistance: 3
+--- !u!1 &8418019410716229131
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6709640956461913359}
+  m_Layer: 7
+  m_Name: AttackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6709640956461913359
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8418019410716229131}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.39, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6613722308853161163}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &3111781894092088600
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -335,14 +383,3 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2219940709560511542, guid: 41d3c3a012cdc0a4daad5bfa8919037d, type: 3}
   m_PrefabInstance: {fileID: 3111781894092088600}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6860459671458090093 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8366134069821368693, guid: 41d3c3a012cdc0a4daad5bfa8919037d, type: 3}
-  m_PrefabInstance: {fileID: 3111781894092088600}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5cf07b8a2efb0a4aa68dfda01a6b8c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
