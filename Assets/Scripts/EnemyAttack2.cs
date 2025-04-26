@@ -35,6 +35,7 @@ public class EnemyAttack2 : MonoBehaviour
     {
         isAttacking = true;
         animator.SetTrigger("Attack");
+        //animator.SetBool("isAttacking", isAttacking);
 
         yield return new WaitForSeconds(attackCooldown);
         isAttacking = false;

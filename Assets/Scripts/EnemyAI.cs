@@ -71,6 +71,11 @@ public class EnemyAI : MonoBehaviour
             {
                 player = null;
                 isChasing = false;
+
+                //điều chỉnh hướng và chuyển về trạng thái Patrol
+                if (transform.localScale.x > 0f) enemyMovement.movingRight = true;
+                else enemyMovement.movingRight = false;
+                enemyMovement.startPosition = transform.position;
                 enemyMovement.Patrol(); // Quay lại tuần tra
             }
         }

@@ -5,7 +5,7 @@ public class PlayerCollision : MonoBehaviour
     private GameManager gameManager;
     private AudioManager audioManager;
     private PlayerAttack playerAttack;
-    private EnemyAttack enemyAttack;
+    private EnemyAttack2 enemyAttack;
     private PlayerController playerController;
 
     [SerializeField] private int healAmount = 20; // Lượng máu/năng lượng hồi phục
@@ -14,7 +14,7 @@ public class PlayerCollision : MonoBehaviour
         gameManager = FindAnyObjectByType<GameManager>();
         audioManager = FindAnyObjectByType<AudioManager>();
         playerAttack = FindAnyObjectByType<PlayerAttack>();
-        enemyAttack = FindAnyObjectByType<EnemyAttack>();
+        enemyAttack = FindAnyObjectByType<EnemyAttack2>();
         playerController = FindAnyObjectByType<PlayerController>();
     }
 
@@ -36,7 +36,7 @@ public class PlayerCollision : MonoBehaviour
         else if (collision.CompareTag("Enemy"))
         {
             // nhận sát thương khi player chạm vào enemy
-            playerAttack.PlayerTakeDamage(enemyAttack.enemyDamage);
+            playerAttack.PlayerTakeDamage(enemyAttack.damage);
 
         }
         else if (collision.CompareTag("KeyVictory"))

@@ -16,6 +16,10 @@ public class PlayerAttack : MonoBehaviour
     public float comboResetTime = 1.0f;  // Thời gian reset combo
     private bool canAttack = true;
 
+    private PlayerController playerController;
+
+    //Skill
+    private bool holySlash = false;
 
     //Máu player
     private GameManager gameManager;
@@ -41,6 +45,8 @@ public class PlayerAttack : MonoBehaviour
         gameManager = FindAnyObjectByType<GameManager>();
         rb = GetComponent<Rigidbody2D>(); // Lấy Rigidbody2D của player
         audioManager = FindAnyObjectByType<AudioManager>();
+
+        playerController = FindAnyObjectByType<PlayerController>(); // để lấy isGrounded xác định mặt đất
     }
 
     void Start()
@@ -63,8 +69,15 @@ public class PlayerAttack : MonoBehaviour
             {
                 comboStep = 0;
             }
-            Attack();
+            // Attack();
+
+            if (playerController.isGrounded)
+            {
+                Attack();
+            }
+            else AirAttack();
         }
+        HolySlash();
     }
 
     //Hàm tấn công
@@ -86,6 +99,39 @@ public class PlayerAttack : MonoBehaviour
         Debug.Log($"Thực hiện chém {comboStep}");
     }
 
+    void AirAttack()
+    {
+        canAttack = false;  // Tắt khả năng tấn công liên tục
+        lastAttackTime = Time.time;
+        comboStep++;
+
+        // Giới hạn combo tối đa trên không (có 2 đòn chém)
+        if (comboStep > 2) comboStep = 1;
+
+        // Kích hoạt animation tương ứng
+        animator.SetTrigger("Attack");
+        animator.SetInteger("ComboStep", comboStep); // Điều chỉnh Animator
+
+        audioManager.PlayAttackSound();
+
+        Debug.Log($"Thực hiện chém trên không {comboStep}");
+    }
+
+    void HolySlash()
+    {
+        if (Input.GetKeyDown(KeyCode.U))
+        {
+            holySlash = true;
+            // Kích hoạt animation tương ứng
+            animator.SetTrigger("HolySlash");
+
+            audioManager.PlayAttackSound();
+
+            Debug.Log($"Thực hiện đòn chém HolySlash");
+        }
+        
+    }
+    
     // Hàm này sẽ được gọi bởi Animation Event để kích hoạt hitbox //tấn công đúng tầm
     public void EnableHitbox()
     {
@@ -93,7 +139,14 @@ public class PlayerAttack : MonoBehaviour
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
         foreach (Collider2D enemy in hitEnemies)
         {
-            enemy.GetComponent<Enemy>().EnemyTakeDamage(attackDamage);
+            // Tính hướng knockback từ player tới enemy
+            Vector2 knockbackDirection = (enemy.transform.position - transform.position).normalized;
+
+            if(holySlash)
+            {
+                enemy.GetComponent<EnemyTakeDamage>().TakeDamage(attackDamage * 10, knockbackDirection);
+            }
+            else enemy.GetComponent<EnemyTakeDamage>().TakeDamage(attackDamage, knockbackDirection);
         }
     }
 

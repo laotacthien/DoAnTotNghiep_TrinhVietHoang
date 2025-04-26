@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
@@ -8,8 +8,8 @@ public class EnemyMovement : MonoBehaviour
     public float patrolDistance = 3f;
 
     private Rigidbody2D rb;
-    private Vector2 startPosition;
-    private bool movingRight = true;
+    public Vector2 startPosition;  // dùng cho cả EnemyAI
+    public bool movingRight = true;   // dùng cho cả EnemyAI
 
     void Start()
     {

@@ -3909,6 +3909,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1088
   wallCheck: {fileID: 294891498}
+  isGrounded: 0
   dashForce: 40
   dashTime: 0.2
   afterImagePrefab: {fileID: 5310135549799318502, guid: fdbaa8cd7a29db640af020a66d1dad05, type: 3}
@@ -5202,6 +5203,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6961236185258430203, guid: 4051d789558d6494fa29d511460cea6f, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7418143688886340319, guid: 4051d789558d6494fa29d511460cea6f, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -5248,6 +5253,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7601497214195323380, guid: 4051d789558d6494fa29d511460cea6f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7739266492870619773, guid: 4051d789558d6494fa29d511460cea6f, type: 3}
+      propertyPath: m_GravityScale
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

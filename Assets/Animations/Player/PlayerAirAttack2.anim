@@ -24,17 +24,17 @@ AnimationClip:
       value: {fileID: -3280615830181175663, guid: 9798f0386615157409d054667757aa7b, type: 3}
     - time: 0.05
       value: {fileID: 278331513366297440, guid: 9ed4067ae67ac0646b00ced3adc6888c, type: 3}
-    - time: 0.1
+    - time: 0.11666667
       value: {fileID: -4521991490394863204, guid: d3f076581feca1341929a572d8ee9b3c, type: 3}
-    - time: 0.15
+    - time: 0.16666667
       value: {fileID: 2654887042011166198, guid: f9de98ee881902c449587fe6e820feca, type: 3}
-    - time: 0.2
+    - time: 0.21666667
       value: {fileID: -2178816768153070472, guid: ea8edab1619fa5547897db34c7f38265, type: 3}
-    - time: 0.25
+    - time: 0.26666668
       value: {fileID: -4638204433330537919, guid: c26193cae1d0ebf44a3f6bd03867a22e, type: 3}
-    - time: 0.3
+    - time: 0.33333334
       value: {fileID: -7211140468792343195, guid: b33caeaf29f3fca4b9bb0b2104ca8094, type: 3}
-    - time: 0.35
+    - time: 0.38333333
       value: {fileID: -8413161246868654299, guid: 004cb300a65452b42a2ef4daa5cd2f01, type: 3}
     attribute: m_Sprite
     path: 
@@ -71,7 +71,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.36666667
+    m_StopTime: 0.4
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -90,4 +90,25 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0.05
+    functionName: EnableHitbox
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.11666667
+    functionName: CanAttack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.38333333
+    functionName: ResetCombo
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

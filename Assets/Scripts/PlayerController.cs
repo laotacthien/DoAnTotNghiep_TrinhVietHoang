@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
     //private SpriteRenderer spriteRenderer;
 
     private Animator animator;
-    private bool isGrounded;
+    public bool isGrounded;
     private Rigidbody2D rb;
     private GameManager gameManager;
     private AudioManager audioManager;
