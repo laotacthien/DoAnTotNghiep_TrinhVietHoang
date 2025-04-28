@@ -126,7 +126,7 @@ public class PlayerAttack : MonoBehaviour
             animator.SetTrigger("HolySlash");
 
             audioManager.PlayAttackSound();
-
+            
             Debug.Log($"Thực hiện đòn chém HolySlash");
         }
         
@@ -145,6 +145,7 @@ public class PlayerAttack : MonoBehaviour
             if(holySlash)
             {
                 enemy.GetComponent<EnemyTakeDamage>().TakeDamage(attackDamage * 10, knockbackDirection);
+                holySlash = false;
             }
             else enemy.GetComponent<EnemyTakeDamage>().TakeDamage(attackDamage, knockbackDirection);
         }

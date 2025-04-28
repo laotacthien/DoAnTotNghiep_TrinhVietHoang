@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\EnemyAI.cs" />
     <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\InventoryAssets\Script\ItemUIController.cs" />
     <Compile Include="Assets\DontdestroyGameManager.cs" />
     <Compile Include="Assets\DontdestroyPlayer.cs" />
     <Compile Include="Assets\Scripts\EnemyAttack2.cs" />
@@ -76,12 +77,15 @@
     <Compile Include="Assets\AfterImage.cs" />
     <Compile Include="Assets\Scripts\FinishPoint.cs" />
     <Compile Include="Assets\Scripts\PlayerCollision.cs" />
+    <Compile Include="Assets\UISoundController.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
     <Compile Include="Assets\Scripts\PlayerAttack.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyAttack.cs" />
+    <Compile Include="Assets\InventoryAssets\Script\Item.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Menu.cs" />
     <Compile Include="Assets\Scripts\SceneController.cs" />
+    <Compile Include="Assets\InventoryAssets\Script\InventoryManager.cs" />
     <Compile Include="Assets\Scripts\MovingPlatform.cs" />
     <Compile Include="Assets\DontdestroyUI.cs" />
     <Compile Include="Assets\EventSystemManager.cs" />

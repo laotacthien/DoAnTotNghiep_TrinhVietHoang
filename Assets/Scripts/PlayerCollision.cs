@@ -9,6 +9,9 @@ public class PlayerCollision : MonoBehaviour
     private PlayerController playerController;
 
     [SerializeField] private int healAmount = 20; // Lượng máu/năng lượng hồi phục
+
+    public Item coinItem, healthPotionItem, energyPotionItem;
+
     private void Awake()
     {
         gameManager = FindAnyObjectByType<GameManager>();
@@ -23,7 +26,11 @@ public class PlayerCollision : MonoBehaviour
     {
         if (collision.CompareTag("Coin"))
         {
+            //Xóa coin
             Destroy(collision.gameObject);
+            //Thêm vào Inventory
+            InventoryManager.Instance.Add(coinItem);
+
             audioManager.PlayCoinSound();
             gameManager.AddScore(1);
             
@@ -49,13 +56,17 @@ public class PlayerCollision : MonoBehaviour
         {
             audioManager.PlayCoinSound();
             playerAttack.Heal(healAmount);
+
             Destroy(collision.gameObject);
+            InventoryManager.Instance.Add(healthPotionItem);
         }
         else if (collision.CompareTag("EnergyPotion"))
         {
             audioManager.PlayCoinSound();
             playerController.HealEnergy(healAmount);
+
             Destroy(collision.gameObject);
+            InventoryManager.Instance.Add(energyPotionItem);
         }
     }
 }

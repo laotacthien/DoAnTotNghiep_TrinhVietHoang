@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
@@ -8,10 +8,8 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip jumpClip;
     [SerializeField] private AudioClip coinClip;
     [SerializeField] private AudioClip dashClip;
-    [SerializeField] private AudioClip runClip;
     [SerializeField] private AudioClip wallJumpClip;
     [SerializeField] private AudioClip attackClip;
-
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -55,4 +53,24 @@ public class AudioManager : MonoBehaviour
     {
         effectAudioSource.PlayOneShot(attackClip);
     }
+
+    //điều chỉnh sound
+    public void ToggleBackGroundAudio()
+    {
+        backgroundAudioSource.mute = !backgroundAudioSource.mute;
+    }
+    public void ToggleSfxAudio()
+    {
+        effectAudioSource.mute = !effectAudioSource.mute;
+    }
+
+    public void BackGroundAudioVolume(float volume)
+    {
+        backgroundAudioSource.volume = volume;
+    }
+    public void EffectAudioVolume(float volume)
+    {
+        effectAudioSource.volume = volume;
+    }
+
 }

@@ -66,5 +66,19 @@ public class Menu : MonoBehaviour
         Time.timeScale = 1;
     }
 
-    
+
+    //Thêm sound menu
+    [SerializeReference] GameObject soundMenu;
+    public void Sound()
+    {
+        soundMenu.SetActive(true) ;
+        Time.timeScale = 0;
+    }
+    public void ExitSoundMenu()
+    {
+        soundMenu.SetActive(false);
+        Time.timeScale = 0;
+    }
+
+
 }
