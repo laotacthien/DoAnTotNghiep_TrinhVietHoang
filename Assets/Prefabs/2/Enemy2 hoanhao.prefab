@@ -189,7 +189,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &5782133698721839364
 MonoBehaviour:
@@ -213,6 +213,7 @@ MonoBehaviour:
   chaseSpeed: 3
   stoppingDistance: 1
   lostTargetTime: 2
+  isAttacking: 0
 --- !u!114 &775331121231137756
 MonoBehaviour:
   m_ObjectHideFlags: 0

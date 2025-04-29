@@ -21,7 +21,7 @@ public class EnemyAI : MonoBehaviour
 
     private EnemyMovement enemyMovement;
     private float lastSeenTime;
-
+    public bool isAttacking = false;
 
     public Transform Player => player;
     public bool IsChasing => isChasing;
@@ -116,7 +116,7 @@ public class EnemyAI : MonoBehaviour
     private void HandleChaseBehavior()
     {
         //if (!isChasing) return;
-        if(player == null) return;
+        if (player == null || isAttacking) return; // dừng di chuyển nếu đang tấn công
 
         float distance = Vector2.Distance(transform.position, player.position);
         if (distance <= stoppingDistance)

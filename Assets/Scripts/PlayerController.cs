@@ -39,6 +39,8 @@ public class PlayerController : MonoBehaviour
     public float afterImageInterval = 0.03f; // tần suất tạo tàn ảnh
     private float afterImageTimer = 0f;
 
+    //skill
+    private bool isLightCutting = false;
 
     //Wallslide và WallJump
     private bool isWallSliding;
@@ -81,6 +83,7 @@ public class PlayerController : MonoBehaviour
         UpdateAnimation();
 
         Dash();
+        LightCut();
 
         // Nếu đang Dash thì tạo tàn ảnh định kỳ
         if (isDashing)
@@ -99,7 +102,7 @@ public class PlayerController : MonoBehaviour
             afterImageTimer -= Time.deltaTime;
             if (afterImageTimer <= 0f)
             {
-                CreateAfterImage(new Color(1f, 1f, 1f, 0.6f));
+                CreateAfterImage(new Color(1f, 0.5f, 0.5f, 0.9f));
                 afterImageTimer = 3 * afterImageInterval;
             }
         }
@@ -261,18 +264,96 @@ public class PlayerController : MonoBehaviour
                 rb.linearVelocity = new Vector2(dashForce * dashDirection, rb.linearVelocity.y);
                 isDashing = true;
 
+                // Tạm thời bỏ qua va chạm với enemy
+                IgnoreEnemyCollisions(true);
+
                 StartCoroutine(StopDash());
             }
         }
     }
+    //tạm thời bỏ qua va chạm với enemy (rigidbody2d)
+    void IgnoreEnemyCollisions(bool ignore)
+    {
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach (GameObject enemy in enemies)
+        {
+            Collider2D enemyCol = enemy.GetComponent<Collider2D>();
+            Collider2D playerCol = GetComponent<Collider2D>();
 
+            if (enemyCol != null && playerCol != null)
+            {
+                Physics2D.IgnoreCollision(playerCol, enemyCol, ignore);
+            }
+        }
+    }
     IEnumerator StopDash()
     {
         yield return new WaitForSeconds(dashTime);
         rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);  //reset lại sau khi dash
         isDashing= false;
-    }
 
+        // Bật lại va chạm với enemy
+        IgnoreEnemyCollisions(false);
+    }
+    //Skill lightcut
+
+    void LightCut()
+    {
+        if (Input.GetKeyDown(KeyCode.I) && isGrounded && !isDashing) // Nhấn i để lghtcut
+        {
+            currentPlayerEnergy -= 1;
+            energyBar.UpdateEnergyBar(currentPlayerEnergy, playermaxEnergy);
+
+            if (currentPlayerEnergy < 0)
+            {
+                return;
+            }
+            else
+            {
+                //audioManager.PlayDashSound();
+                //float dashDirection = turnRight ? 1 : -1;  //hướng Dash
+                //rb.linearVelocity = new Vector2(dashForce * dashDirection, rb.linearVelocity.y);
+                //isDashing = true;
+
+                //StartCoroutine(StopDash());
+                
+                StartCoroutine(PerformLightCut());
+
+            }
+        }
+    }
+    IEnumerator PerformLightCut()
+    {
+        isLightCutting = true;
+
+        // 1. Vận lực (chờ delay)
+        float chargeTime = 1.3f; // thời gian vận lực
+        rb.linearVelocity = Vector2.zero; // dừng chuyển động
+        animator.SetTrigger("LightCut"); 
+        yield return new WaitForSeconds(chargeTime);
+
+        // 2. Thực hiện dash
+        float dashSpeed = 43f;
+        float dashTime = 0.2f;
+        Vector2 dashDirection = transform.localScale.x > 0 ? Vector2.right : Vector2.left;
+
+        float elapsed = 0f;
+        while (elapsed < dashTime)
+        {
+            rb.linearVelocity = dashDirection * dashSpeed;
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        // 3. Kết thúc dash
+        rb.linearVelocity = Vector2.zero;
+        yield return new WaitForSeconds(1f); // hồi chiêu
+        isLightCutting = false;
+    }
+    public bool IsLightCut()
+    {
+        return isLightCutting;
+    }
     void CreateAfterImage(Color color)
     {
         Debug.Log("Tạo tàn ảnh!");

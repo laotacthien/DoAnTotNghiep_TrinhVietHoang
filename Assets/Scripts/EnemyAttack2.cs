@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
 public class EnemyAttack2 : MonoBehaviour
@@ -34,11 +34,14 @@ public class EnemyAttack2 : MonoBehaviour
     private IEnumerator PerformAttack()
     {
         isAttacking = true;
+        enemyAI.isAttacking = true; // thông báo cho EnemyAI dừng di chuyển
+
         animator.SetTrigger("Attack");
         //animator.SetBool("isAttacking", isAttacking);
 
         yield return new WaitForSeconds(attackCooldown);
         isAttacking = false;
+        //enemyAI.isAttacking = false; // Cho phép di chuyển trở lại
     }
 
     // Called from Animation Event
@@ -46,6 +49,7 @@ public class EnemyAttack2 : MonoBehaviour
     {
         Collider2D player = Physics2D.OverlapCircle(attackPoint.position, attackRange, enemyAI.playerLayer);
         player?.GetComponent<PlayerAttack>()?.PlayerTakeDamage(damage);
+        enemyAI.isAttacking = false; // Cho phép di chuyển trở lại
     }
 
     private void OnDrawGizmosSelected()
