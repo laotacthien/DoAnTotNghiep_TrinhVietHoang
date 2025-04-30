@@ -232,6 +232,7 @@ public class PlayerAttack : MonoBehaviour
     public void Heal(int amount)
     {
         currentPlayerHealth += amount;
+        animator.SetTrigger("Heal");
 
         //gameManager.UpdateHPBar(currentPlayerHealth, PlayermaxHealth);  // cập nhật lại thanh máu
         hPBar.UpdateHPBar(currentPlayerHealth, PlayermaxHealth);
