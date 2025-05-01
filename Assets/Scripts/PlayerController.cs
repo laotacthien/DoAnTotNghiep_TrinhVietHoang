@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour
     private float afterImageTimer = 0f;
 
     //skill
-    private bool isLightCutting = false;
+    public bool isLightCutting = false;
 
     //Wallslide và WallJump
     private bool isWallSliding;
@@ -310,13 +310,6 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                //audioManager.PlayDashSound();
-                //float dashDirection = turnRight ? 1 : -1;  //hướng Dash
-                //rb.linearVelocity = new Vector2(dashForce * dashDirection, rb.linearVelocity.y);
-                //isDashing = true;
-
-                //StartCoroutine(StopDash());
-                
                 StartCoroutine(PerformLightCut());
 
             }
@@ -324,15 +317,17 @@ public class PlayerController : MonoBehaviour
     }
     IEnumerator PerformLightCut()
     {
-        isLightCutting = true;
-
         // 1. Vận lực (chờ delay)
         float chargeTime = 1.3f; // thời gian vận lực
         rb.linearVelocity = Vector2.zero; // dừng chuyển động
         animator.SetTrigger("LightCut"); 
         yield return new WaitForSeconds(chargeTime);
 
+        isLightCutting = true;
+        IgnoreEnemyCollisions(true);
+
         // 2. Thực hiện dash
+        
         float dashSpeed = 43f;
         float dashTime = 0.2f;
         Vector2 dashDirection = transform.localScale.x > 0 ? Vector2.right : Vector2.left;
@@ -340,19 +335,35 @@ public class PlayerController : MonoBehaviour
         float elapsed = 0f;
         while (elapsed < dashTime)
         {
+
             rb.linearVelocity = dashDirection * dashSpeed;
+
+            Collider2D[] hits = Physics2D.OverlapCircleAll(rb.position, 0.5f);
+            foreach (var hit in hits)
+            {
+                if (hit.CompareTag("Enemy"))
+                {
+                    var enemy = hit.GetComponent<EnemyTakeDamage>(); 
+                    if (enemy != null && isLightCutting) // tránh gây sát thương nhiều lần
+                    {
+                        enemy.TakeDamage(10, dashDirection);
+                        isLightCutting = false;
+                    }
+                }
+            }
             elapsed += Time.deltaTime;
             yield return null;
         }
-
         // 3. Kết thúc dash
         rb.linearVelocity = Vector2.zero;
-        yield return new WaitForSeconds(1f); // hồi chiêu
+        IgnoreEnemyCollisions(false);
         isLightCutting = false;
+        yield return new WaitForSeconds(1f); // hồi chiêu
+        
     }
-    public bool IsLightCut()
+    public void EndLightCut()
     {
-        return isLightCutting;
+        //IgnoreEnemyCollisions(false);
     }
     void CreateAfterImage(Color color)
     {

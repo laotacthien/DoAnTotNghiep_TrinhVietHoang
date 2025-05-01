@@ -68,7 +68,8 @@ public class EnemyTakeDamage : MonoBehaviour
         knockbackTimer = knockbackDuration;
 
         // Tạm dừng AI và movement
-        enemyAI.enabled = false;
+        //enemyAI.enabled = false;
+        enemyAI.isKnockback = isKnockback;
         if (enemyMovement != null)
             enemyMovement.StopPatrol();
 
@@ -87,11 +88,14 @@ public class EnemyTakeDamage : MonoBehaviour
         rb.linearVelocity = Vector2.zero;
 
         // Kích hoạt lại AI
-        enemyAI.enabled = true;
+        //enemyAI.enabled = true;
+        enemyAI.isKnockback = isKnockback;
 
         // Reset animation nếu cần
         if (animator != null)
             animator.ResetTrigger("KnockBackTrigger");
+
+        enemyAI.isAttacking = false; // Cho phép enemy di chuyển trở lại
     }
     void Die()
     {

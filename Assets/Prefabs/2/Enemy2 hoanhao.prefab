@@ -214,6 +214,7 @@ MonoBehaviour:
   stoppingDistance: 1
   lostTargetTime: 2
   isAttacking: 0
+  isKnockback: 0
 --- !u!114 &775331121231137756
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -258,7 +259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbc08625df93d3d4694fbb216c9bf18e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemymaxHealth: 50
+  enemymaxHealth: 500
   enemyHealthBar: {fileID: 6860459671458090093}
   knockbackDuration: 0.2
   knockbackForce: 5

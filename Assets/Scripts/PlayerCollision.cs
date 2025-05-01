@@ -40,26 +40,27 @@ public class PlayerCollision : MonoBehaviour
             //gameManager.GameOver();
             playerAttack.PlayerTakeDamage(10);
         }
-        else if (collision.CompareTag("Enemy"))
-        {
-            // nhận sát thương khi player chạm vào enemy
-            //playerAttack.PlayerTakeDamage(enemyAttack.damage);
-            if (playerController.IsLightCut()) // xác nhận chỉ gây damage khi dash
-            {
-                if (collision.CompareTag("Enemy"))
-                {
-                    // Gây damage cho enemy
-                    var enemy = collision.GetComponent<EnemyTakeDamage>();
-                    if (enemy != null)
-                    {
-                        // Tính hướng knockback từ player tới enemy
-                        Vector2 knockbackDirection = (enemy.transform.position - transform.position).normalized;
-                        enemy.TakeDamage(playerAttack.attackDamage * 10, knockbackDirection);
-                    }
-                }
-            }
+        //else if (collision.CompareTag("Enemy"))
+        //{
+        //    // nhận sát thương khi player chạm vào enemy
+        //    //playerAttack.PlayerTakeDamage(enemyAttack.damage);
+        //    if (playerController.IsLightCut()) // xác nhận chỉ gây damage khi dash
+        //    {
+        //        if (collision.CompareTag("Enemy"))
+        //        {
+        //            // Gây damage cho enemy
+        //            var enemy = collision.GetComponent<EnemyTakeDamage>();
+        //            if (enemy != null)
+        //            {
+        //                // Tính hướng knockback từ player tới enemy
+        //                //Vector2 knockbackDirection = (enemy.transform.position - transform.position).normalized;
+        //                //enemy.TakeDamage(playerAttack.attackDamage * 10, knockbackDirection);
+        //                playerAttack.EnableHitbox();
+        //            }
+        //        }
+        //    }
 
-        }
+        //}
         else if (collision.CompareTag("KeyVictory"))
         {
             gameManager.GameWin();

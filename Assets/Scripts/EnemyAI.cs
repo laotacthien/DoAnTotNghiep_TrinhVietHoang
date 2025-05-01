@@ -22,6 +22,7 @@ public class EnemyAI : MonoBehaviour
     private EnemyMovement enemyMovement;
     private float lastSeenTime;
     public bool isAttacking = false;
+    public bool isKnockback = false;
 
     public Transform Player => player;
     public bool IsChasing => isChasing;
@@ -53,6 +54,12 @@ public class EnemyAI : MonoBehaviour
         //{
         //    FindPlayer();
         //}
+        EnemyAi();
+    }
+    private void EnemyAi()
+    {
+        if (isKnockback) return; // Dừng AI nếu đang bị đánh
+
         if (player != null)
         {
             float currentDistance = Vector2.Distance(transform.position, player.position);

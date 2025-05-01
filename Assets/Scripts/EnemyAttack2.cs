@@ -43,13 +43,11 @@ public class EnemyAttack2 : MonoBehaviour
         isAttacking = false;
         //enemyAI.isAttacking = false; // Cho phép di chuyển trở lại
     }
-
-    // Called from Animation Event
     public void EnableHitbox()
     {
         Collider2D player = Physics2D.OverlapCircle(attackPoint.position, attackRange, enemyAI.playerLayer);
         player?.GetComponent<PlayerAttack>()?.PlayerTakeDamage(damage);
-        enemyAI.isAttacking = false; // Cho phép di chuyển trở lại
+        enemyAI.isAttacking = false; // Cho phép enemy di chuyển trở lại
     }
 
     private void OnDrawGizmosSelected()
