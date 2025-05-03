@@ -21,6 +21,8 @@ public class EnemyTakeDamage : MonoBehaviour
     private EnemyAI enemyAI;
     private EnemyMovement enemyMovement;
 
+    public GameObject floatingTextPrefab;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -54,6 +56,12 @@ public class EnemyTakeDamage : MonoBehaviour
         // Knockback
         animator.SetTrigger("KnockBackTrigger");
         ApplyKnockback(knockbackDirection);
+
+        // Hiển thị popup damage (floating text)
+        if (floatingTextPrefab)
+        {
+            ShowFloatingText();
+        }
 
         // Xử lý chết
         if (currentEnemyHealth <= 0)
@@ -97,6 +105,12 @@ public class EnemyTakeDamage : MonoBehaviour
 
         enemyAI.isAttacking = false; // Cho phép enemy di chuyển trở lại
     }
+    void ShowFloatingText()
+    {
+        var go = Instantiate(floatingTextPrefab, transform.position, Quaternion.identity, transform);
+        go.GetComponent<TextMesh>().text = currentEnemyHealth.ToString();
+    }
+
     void Die()
     {
         //Destroy(gameObject); // Xóa kẻ địch khi chết

@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\InventoryAssets\Script\ItemUIController.cs" />
     <Compile Include="Assets\DontdestroyGameManager.cs" />
+    <Compile Include="Assets\FloatingText.cs" />
     <Compile Include="Assets\DontdestroyPlayer.cs" />
     <Compile Include="Assets\Scripts\EnemyAttack2.cs" />
     <Compile Include="Assets\Scripts\ParallaxController.cs" />
