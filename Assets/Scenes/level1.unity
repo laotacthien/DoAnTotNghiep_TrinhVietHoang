@@ -7678,6 +7678,10 @@ PrefabInstance:
       value: FloatingText
       objectReference: {fileID: 0}
     - target: {fileID: 4770435936523451557, guid: c8e06186d8f5aaf4bae7d112d11db1a6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4770435936523451557, guid: c8e06186d8f5aaf4bae7d112d11db1a6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -7717,14 +7721,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4770435936523451557, guid: c8e06186d8f5aaf4bae7d112d11db1a6, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8577697074826758822, guid: c8e06186d8f5aaf4bae7d112d11db1a6, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 58239786ae695344fae0a0e3254d7e13, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

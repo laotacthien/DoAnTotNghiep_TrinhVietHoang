@@ -11,4 +11,17 @@ public class FloatingText : MonoBehaviour
 
         transform.position += offSet;
     }
+    void Update()
+    {
+        DirectionText();
+    }
+    void DirectionText()
+    {
+        if(transform.localScale.x < 0)
+        {
+            Vector3 scale = transform.localScale;
+            scale.x *= -1;
+            transform.localScale = scale;
+        }
+    }
 }
