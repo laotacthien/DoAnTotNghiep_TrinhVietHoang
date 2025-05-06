@@ -15,6 +15,12 @@ public class GameManager : MonoBehaviour
     //thanh máu player
     public Image hPBar;
 
+    //thông tin trong PlayerInfo
+    [SerializeField] private TextMeshProUGUI healthText;
+    [SerializeField] private TextMeshProUGUI energyText;
+    [SerializeField] private TextMeshProUGUI damageText;
+    [SerializeField] private TextMeshProUGUI scoreText2;
+
     //cập nhật thanh máu player
     public void UpdateHPBar(float currentHealth, float maxHealth)
     {
@@ -29,6 +35,19 @@ public class GameManager : MonoBehaviour
         energyBar.fillAmount = currentEnergy / maxEnergy;
     }
 
+    //cập nhật thông tin trong PlayerInfo
+    public void UpdateHealthText(float currentHealth)
+    {
+        healthText.text = currentHealth.ToString() + "/ 100";
+    }
+    public void UpdateEnergyText(float currentEnergy)
+    {
+        energyText.text = currentEnergy.ToString() + "/ 100";
+    }
+    public void UpdateDamageText(float currentDamage)
+    {
+        damageText.text = currentDamage.ToString();
+    }
     void Start()
     {
         UpdateScore();
@@ -59,6 +78,7 @@ public class GameManager : MonoBehaviour
             return;
         }
         scoreText.text = score.ToString();
+        scoreText2.text = score.ToString();
     }
 
     public void GameOver()

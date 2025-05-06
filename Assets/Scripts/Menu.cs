@@ -12,7 +12,10 @@ public class Menu : MonoBehaviour
     public void QuitGame() { 
         Application.Quit();
     }
-
+    public void TransGame()
+    {
+        SceneManager.LoadScene("level0");
+    }
     //gọi Scene trong bảng chonj level (bằng tên scene)
     public void Openlevel(int levelID)
     {

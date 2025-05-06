@@ -1,0 +1,1500 @@
+fileFormatVersion: 2
+guid: 43eddf001b1c1e2489ba5c10c0e2293d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8959466676202046076
+    second: irina-savchishina-icons-ben_0
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_0
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 1857
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7209f3097b665c70800000000000000
+      internalID: 8959466676202046076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_1
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 1857
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2b0ed478f0421f40b37e4c5ed64ac66
+      internalID: -844111363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_2
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 1857
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 087f58ae37fb29442a235ef47ed3f5bf
+      internalID: -114557802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_3
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 1857
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31e28e2141f26ac49b582e52bb3d0639
+      internalID: 299430813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_4
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 1857
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3b9ee5969b338b419943f85f41637a1
+      internalID: -180863986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_5
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 1857
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49762b99fd30ba549ba74f7d7db5a887
+      internalID: -802943815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_6
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 1659
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b9a7d78520e8ce48808a02b2f3d14fd
+      internalID: -859263715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_7
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 1659
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 693384e86fa32894f9f300d48e93de29
+      internalID: -48726141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_8
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 1659
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44f747474d59ecf4691bba7bbf7ebc5d
+      internalID: -1049665083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_9
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 1659
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5127f8b602b61a46b766f5e8304f935
+      internalID: -629454993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_10
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 1659
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a46ccaf42212a414f80e67232f1e0ee8
+      internalID: -1997808815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_11
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 1659
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c89afb7572efea4f9604c842fee4e18
+      internalID: 1530858578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_12
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 1461
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4512ce5153f01da44a6081f0667fc43a
+      internalID: 2064274723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_13
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 1461
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca846a3c3f8837a4987fe69424a0233e
+      internalID: -487889728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_14
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 1461
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b082c317efbb65842affa2bf0dea9b61
+      internalID: 963636931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_15
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 1461
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08e746bc93b98ea41ac2e88379cc1b86
+      internalID: 1408902883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_16
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 1461
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b3cedd0df66248468d445b0070dec00
+      internalID: -2114350133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_17
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 1461
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3182abe9e9c50bc409e5f76d0b4cac4f
+      internalID: -1516403407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_18
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 1263
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74bcd78cf0b6cc049850c99688e6d10f
+      internalID: -121988063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_19
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 1263
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79da57e6a6ad3e949a439807185b680d
+      internalID: -145952363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_20
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 1263
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69cf9a34e2eb0c9488f1961e09b646bd
+      internalID: 1212680328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_21
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 1263
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feb0c42264bcd2a41a73a659a625833f
+      internalID: 1470227178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_22
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 1263
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db37f9c9ab2ac734faa573dd9295fd18
+      internalID: -1347518367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_23
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 1263
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14e84bbc148a0bd4ca31045935f4d647
+      internalID: -965111901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_24
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 1065
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ea455f68aaa0334b92b60535e28f445
+      internalID: 424620378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_25
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 1065
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2bcb34d9a6d44842a2bd11c6fe5f6bf
+      internalID: 198471231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_26
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 1065
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb5f30f14a17d734b86460384d39f874
+      internalID: -951411632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_27
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 1065
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fc69cfbbdb09504ab568bf66afc4769
+      internalID: 89222666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_28
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 1065
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e5f711d487724c49a08b307f045f6c6
+      internalID: -2029702260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_29
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 1065
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41353625212f9094aa1fa75a8f8e8d10
+      internalID: -923919652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_30
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 867
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97ea85a32d3ee9046881158c4fad5f4f
+      internalID: 1857240285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_31
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 867
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cbaa2f4b68aaa948817a0dd149d0f42
+      internalID: -861476176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_32
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 867
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d2be441bb2a51d46ad35962fb214ee6
+      internalID: 376618058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_33
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 867
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9c424f03f56d17499499217cfb4607b
+      internalID: 304577240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_34
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 867
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ed9fcfc149c5d4439f9bd8db47d5df5
+      internalID: 1870542309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_35
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 867
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61fdf8eb2576cb547afed6e23a7c7761
+      internalID: -1055266532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_36
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 669
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b778209a9f9fa904e965b1d27824b08f
+      internalID: -1740396457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_37
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 669
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bca80096e4e0cef4e907f1ba8b5351c0
+      internalID: 533375055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_38
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 669
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b176f5d53f1ea854286a9410d713f64d
+      internalID: 767417563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_39
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 669
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9fb2cdf8b41ff04899f4ed24babc59c
+      internalID: 67214565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_40
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 669
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: add6c726977ca434ab853b0d7ab4ca16
+      internalID: -443714698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_41
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 669
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd84d00a698d4314e8df9d941c47ed4e
+      internalID: -1537838590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_42
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 471
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfed3a6bd7a5fda4e800bfeb2f593d49
+      internalID: 893001568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_43
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 471
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50c3debef9c01b841b4eb9bb5f1c6c8b
+      internalID: 1948596606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_44
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 471
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f34a023f4d9e11247afd4e31a36a98dc
+      internalID: -1935013546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_45
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 471
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bbcfa6eb1fd00f4790083deed7be27b
+      internalID: 1258918371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_46
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 471
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7c2786ee6225434992373f1db6aa7e9
+      internalID: 599245708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_47
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 471
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fa5d982d940a9e4ab94c4d32299d0be
+      internalID: -1031529172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_48
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 273
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf50b218b6f91a642b64028f9522e0ea
+      internalID: -590749844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_49
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 273
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63062e60d03ee1044b2a238fe22b7bbc
+      internalID: 1170383721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_50
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 273
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14ed73fc662d0ce42bbbdf55ebf8e431
+      internalID: -362001721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_51
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 273
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64ba4f6cdec7bca439f910c1b62f3ad1
+      internalID: -1503224721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_52
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 273
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 417c6e59949627c44846f4aaeaddce56
+      internalID: 232680487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_53
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 273
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e88752b4f1da9bc4c9da984482a6858d
+      internalID: -2004219683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_54
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 75
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 687c009173a2c284686f3d72a0712f09
+      internalID: 653375437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_55
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 75
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afcdad0ebcb3dc54ebcd2b41e9d9ee18
+      internalID: -1723880127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_56
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 75
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5daf37427b83ed441ba9ef55f9639047
+      internalID: 1908423820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_57
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 75
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b0432ce52446ca47aba994eb97e7607
+      internalID: 454412320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_58
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 75
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0774d10456cf8fb4cbc1620eaa159f50
+      internalID: 1739319331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: irina-savchishina-icons-ben_59
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 75
+        width: 196
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 521bd0ef7b23dc74e98ee52ca4492648
+      internalID: -858285558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: c9b619a251f201c4dbc5f6f3298d73de
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      irina-savchishina-icons-ben_0: 8959466676202046076
+      irina-savchishina-icons-ben_1: -844111363
+      irina-savchishina-icons-ben_10: -1997808815
+      irina-savchishina-icons-ben_11: 1530858578
+      irina-savchishina-icons-ben_12: 2064274723
+      irina-savchishina-icons-ben_13: -487889728
+      irina-savchishina-icons-ben_14: 963636931
+      irina-savchishina-icons-ben_15: 1408902883
+      irina-savchishina-icons-ben_16: -2114350133
+      irina-savchishina-icons-ben_17: -1516403407
+      irina-savchishina-icons-ben_18: -121988063
+      irina-savchishina-icons-ben_19: -145952363
+      irina-savchishina-icons-ben_2: -114557802
+      irina-savchishina-icons-ben_20: 1212680328
+      irina-savchishina-icons-ben_21: 1470227178
+      irina-savchishina-icons-ben_22: -1347518367
+      irina-savchishina-icons-ben_23: -965111901
+      irina-savchishina-icons-ben_24: 424620378
+      irina-savchishina-icons-ben_25: 198471231
+      irina-savchishina-icons-ben_26: -951411632
+      irina-savchishina-icons-ben_27: 89222666
+      irina-savchishina-icons-ben_28: -2029702260
+      irina-savchishina-icons-ben_29: -923919652
+      irina-savchishina-icons-ben_3: 299430813
+      irina-savchishina-icons-ben_30: 1857240285
+      irina-savchishina-icons-ben_31: -861476176
+      irina-savchishina-icons-ben_32: 376618058
+      irina-savchishina-icons-ben_33: 304577240
+      irina-savchishina-icons-ben_34: 1870542309
+      irina-savchishina-icons-ben_35: -1055266532
+      irina-savchishina-icons-ben_36: -1740396457
+      irina-savchishina-icons-ben_37: 533375055
+      irina-savchishina-icons-ben_38: 767417563
+      irina-savchishina-icons-ben_39: 67214565
+      irina-savchishina-icons-ben_4: -180863986
+      irina-savchishina-icons-ben_40: -443714698
+      irina-savchishina-icons-ben_41: -1537838590
+      irina-savchishina-icons-ben_42: 893001568
+      irina-savchishina-icons-ben_43: 1948596606
+      irina-savchishina-icons-ben_44: -1935013546
+      irina-savchishina-icons-ben_45: 1258918371
+      irina-savchishina-icons-ben_46: 599245708
+      irina-savchishina-icons-ben_47: -1031529172
+      irina-savchishina-icons-ben_48: -590749844
+      irina-savchishina-icons-ben_49: 1170383721
+      irina-savchishina-icons-ben_5: -802943815
+      irina-savchishina-icons-ben_50: -362001721
+      irina-savchishina-icons-ben_51: -1503224721
+      irina-savchishina-icons-ben_52: 232680487
+      irina-savchishina-icons-ben_53: -2004219683
+      irina-savchishina-icons-ben_54: 653375437
+      irina-savchishina-icons-ben_55: -1723880127
+      irina-savchishina-icons-ben_56: 1908423820
+      irina-savchishina-icons-ben_57: 454412320
+      irina-savchishina-icons-ben_58: 1739319331
+      irina-savchishina-icons-ben_59: -858285558
+      irina-savchishina-icons-ben_6: -859263715
+      irina-savchishina-icons-ben_7: -48726141
+      irina-savchishina-icons-ben_8: -1049665083
+      irina-savchishina-icons-ben_9: -629454993
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

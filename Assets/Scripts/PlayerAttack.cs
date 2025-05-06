@@ -20,6 +20,9 @@ public class PlayerAttack : MonoBehaviour
 
     //Skill
     private bool holySlash = false;
+    public float holySlashCooldown = 3f; // Thời gian hồi chiêu cho HolySlash (3 giây)
+    private float holySlashCooldownTimer = 0f;
+    public SkillCooldownUI holySlashUI;
 
     //Máu player
     private GameManager gameManager;
@@ -78,6 +81,13 @@ public class PlayerAttack : MonoBehaviour
             else AirAttack();
         }
         HolySlash();
+
+        gameManager.UpdateHealthText(currentPlayerHealth);
+        gameManager.UpdateDamageText(attackDamage);
+
+        if (holySlashCooldownTimer > 0)
+            holySlashCooldownTimer -= Time.deltaTime;
+
     }
 
     //Hàm tấn công
@@ -119,7 +129,7 @@ public class PlayerAttack : MonoBehaviour
 
     void HolySlash()
     {
-        if (Input.GetKeyDown(KeyCode.U))
+        if (Input.GetKeyDown(KeyCode.U) && holySlashCooldownTimer <= 0)
         {
             holySlash = true;
             // Kích hoạt animation tương ứng
@@ -128,6 +138,8 @@ public class PlayerAttack : MonoBehaviour
             audioManager.PlayAttackSound();
             
             Debug.Log($"Thực hiện đòn chém HolySlash");
+            holySlashUI.TriggerCooldown();
+            holySlashCooldownTimer = holySlashCooldown;
         }
         
     }

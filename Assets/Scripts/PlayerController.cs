@@ -34,6 +34,9 @@ public class PlayerController : MonoBehaviour
     private bool isDashing = false;
     public float dashTime = 0.2f;
     private bool turnRight;   //để lấy hướng Dash
+    public float DashCooldown = 5f;
+    private float DashCooldownTimer = 0f;
+    public SkillCooldownUI dashUI;
 
     public GameObject afterImagePrefab; // gắn trong Inspector
     public float afterImageInterval = 0.03f; // tần suất tạo tàn ảnh
@@ -41,6 +44,9 @@ public class PlayerController : MonoBehaviour
 
     //skill
     public bool isLightCutting = false;
+    public float lightCutCooldown = 5f;
+    private float lightCutCooldownTimer = 0f;
+    public SkillCooldownUI lightcutUI;
 
     //Wallslide và WallJump
     private bool isWallSliding;
@@ -110,14 +116,22 @@ public class PlayerController : MonoBehaviour
         WallSlide();
         WallJump();
 
+        gameManager.UpdateEnergyText(currentPlayerEnergy);
+
+        if (DashCooldownTimer > 0)
+            DashCooldownTimer -= Time.deltaTime;
+
+        if (lightCutCooldownTimer > 0)
+            lightCutCooldownTimer -= Time.deltaTime;
+
         //Tấn công
         //if (Input.GetKeyDown(KeyCode.J) && canAttack) // Nhấn J để tấn công
         //{
 
-            //Debug.Log($"Bấm tấn công - canAttackAgain: {canAttack}");
-            // Reset combo nếu không nhấn trong thời gian cho phép
-         //   if (Time.time - lastAttackTime > comboResetTime)
-         //   {
+        //Debug.Log($"Bấm tấn công - canAttackAgain: {canAttack}");
+        // Reset combo nếu không nhấn trong thời gian cho phép
+        //   if (Time.time - lastAttackTime > comboResetTime)
+        //   {
         //        comboStep = 0;
         //    }
         //    Attack();
@@ -248,7 +262,7 @@ public class PlayerController : MonoBehaviour
 
     void Dash()
     {
-        if (Input.GetKeyDown(KeyCode.K)) // Nhấn K để dash
+        if (Input.GetKeyDown(KeyCode.K) && DashCooldownTimer <= 0) // Nhấn K để dash
         {
             currentPlayerEnergy -= 1;
             energyBar.UpdateEnergyBar(currentPlayerEnergy, playermaxEnergy);
@@ -269,6 +283,9 @@ public class PlayerController : MonoBehaviour
 
                 StartCoroutine(StopDash());
             }
+
+            dashUI.TriggerCooldown();
+            DashCooldownTimer = DashCooldown;
         }
     }
     //tạm thời bỏ qua va chạm với enemy (rigidbody2d)
@@ -299,7 +316,7 @@ public class PlayerController : MonoBehaviour
 
     void LightCut()
     {
-        if (Input.GetKeyDown(KeyCode.I) && isGrounded && !isDashing) // Nhấn i để lghtcut
+        if (Input.GetKeyDown(KeyCode.I) && isGrounded && !isDashing && lightCutCooldownTimer <= 0) // Nhấn i để lghtcut
         {
             currentPlayerEnergy -= 1;
             energyBar.UpdateEnergyBar(currentPlayerEnergy, playermaxEnergy);
@@ -311,8 +328,10 @@ public class PlayerController : MonoBehaviour
             else
             {
                 StartCoroutine(PerformLightCut());
-
             }
+
+            lightcutUI.TriggerCooldown();
+            lightCutCooldownTimer = lightCutCooldown;
         }
     }
     IEnumerator PerformLightCut()

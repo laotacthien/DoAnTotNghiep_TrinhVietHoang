@@ -1600,7 +1600,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -28, y: 1.7, z: -10}
+  m_LocalPosition: {x: 70, y: 24.6, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3220,7 +3220,7 @@ Transform:
   m_GameObject: {fileID: 1454815767}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -28, y: 1.7, z: -10}
+  m_LocalPosition: {x: 70, y: 24.6, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3939,7 +3939,7 @@ Transform:
   m_GameObject: {fileID: 1749145417}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -28, y: 1.7, z: 0}
+  m_LocalPosition: {x: 70, y: 24.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3970,10 +3970,16 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1088
   wallCheck: {fileID: 294891498}
+  isGrounded: 0
   dashForce: 40
   dashTime: 0.2
+  DashCooldown: 5
+  dashUI: {fileID: 0}
   afterImagePrefab: {fileID: 5310135549799318502, guid: fdbaa8cd7a29db640af020a66d1dad05, type: 3}
   afterImageInterval: 0.03
+  isLightCutting: 0
+  lightCutCooldown: 5
+  lightcutUI: {fileID: 0}
   playermaxEnergy: 100
   energyBar: {fileID: 20805937}
 --- !u!95 &1749145423
@@ -4010,7 +4016,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5fa8c42589965f4899d24fbf24fb30d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healAmount: 20
+  coinItem: {fileID: 0}
+  healthPotionItem: {fileID: 0}
+  energyPotionItem: {fileID: 0}
 --- !u!114 &1749145425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4031,6 +4039,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   comboResetTime: 1
+  holySlashCooldown: 3
+  holySlashUI: {fileID: 0}
   hPBar: {fileID: 20805937}
   PlayermaxHealth: 100
   knockbackDuration: 0.2
@@ -4623,7 +4633,6 @@ MonoBehaviour:
   jumpClip: {fileID: 8300000, guid: 0d2cb0465ea41a84299a11e6d9ac7246, type: 3}
   coinClip: {fileID: 8300000, guid: ca24f0d430f8637488b9bdbddc3743e5, type: 3}
   dashClip: {fileID: 8300000, guid: 359f3ff789d47e049b2ed41fabab0f5f, type: 3}
-  runClip: {fileID: 0}
   wallJumpClip: {fileID: 8300000, guid: 0d2cb0465ea41a84299a11e6d9ac7246, type: 3}
   attackClip: {fileID: 8300000, guid: d534bc9531c6f6e44beea95bb4a88c6a, type: 3}
 --- !u!4 &2069506066
@@ -5069,6 +5078,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttons: []
   pauseMenu: {fileID: 5917421882473453234}
+  soundMenu: {fileID: 0}
 --- !u!224 &1070079344955138228
 RectTransform:
   m_ObjectHideFlags: 0

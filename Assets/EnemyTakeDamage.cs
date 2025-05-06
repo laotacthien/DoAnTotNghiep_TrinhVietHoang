@@ -107,8 +107,14 @@ public class EnemyTakeDamage : MonoBehaviour
     }
     void ShowFloatingText()
     {
-        var go = Instantiate(floatingTextPrefab, transform.position, Quaternion.identity, transform);
+        //var go = Instantiate(floatingTextPrefab, transform.position, Quaternion.identity, transform);
+        var go = Instantiate(floatingTextPrefab, transform.position + new Vector3(0, 0.3f, 0), Quaternion.identity); // không có parent  (để đảm bảo text luôn hướng đúng chiều)
         go.GetComponent<TextMesh>().text = currentEnemyHealth.ToString();
+
+        // Đảm bảo luôn hiển thị phía trước các tilemap hoặc foreground
+        var meshRenderer = go.GetComponent<MeshRenderer>();
+        meshRenderer.sortingLayerName = "UI";       
+        meshRenderer.sortingOrder = 10;             // số càng cao càng nằm phía trên
     }
 
     void Die()
