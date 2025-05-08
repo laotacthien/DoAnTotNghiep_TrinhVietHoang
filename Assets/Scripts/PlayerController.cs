@@ -208,19 +208,27 @@ public class PlayerController : MonoBehaviour
 
             if (moveInput > 0)
             {
+                if (Input.GetKey(KeyCode.LeftShift))
+                {
+                    rb.linearVelocity = new Vector2(moveInput * moveSpeed * 3, rb.linearVelocity.y);
+                }
                 //audioManager.PlayRunSound();
                 transform.localScale = new Vector3(1, 1, 1);   //spriteRenderer.flipX = false; //lật mới
                 turnRight = true;
             }
             else if (moveInput < 0) 
             {
+                if (Input.GetKey(KeyCode.LeftShift))
+                {
+                    rb.linearVelocity = new Vector2(moveInput * moveSpeed * 3, rb.linearVelocity.y);
+                }
                 //audioManager.PlayRunSound();
                 transform.localScale = new Vector3(-1, 1, 1);  //spriteRenderer.flipX= true;
                 turnRight = false;
             }          
         }
     }
-
+    //private bool holdShift => Input.GetKey(KeyCode.LeftShift);
     private void HandleJump()
     {
         if (Input.GetButtonDown("Jump"))
