@@ -9,7 +9,7 @@ using UnityEngine.Timeline;
 public class PlayerController : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    [SerializeField] private float moveSpeed = 5f;
+    [SerializeField] private float moveSpeed = 3f;
     [SerializeField] private float jumpForce = 16f;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private Transform groundCheck;
@@ -25,6 +25,9 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private GameManager gameManager;
     private AudioManager audioManager;
+
+    //private bool isWalking;
+    private bool isRunning = false;
 
     //Nhảy kép
     private bool doubleJump;
@@ -211,7 +214,9 @@ public class PlayerController : MonoBehaviour
                 if (Input.GetKey(KeyCode.LeftShift))
                 {
                     rb.linearVelocity = new Vector2(moveInput * moveSpeed * 3, rb.linearVelocity.y);
+                    isRunning = true;
                 }
+                else isRunning = false;
                 //audioManager.PlayRunSound();
                 transform.localScale = new Vector3(1, 1, 1);   //spriteRenderer.flipX = false; //lật mới
                 turnRight = true;
@@ -220,12 +225,14 @@ public class PlayerController : MonoBehaviour
             {
                 if (Input.GetKey(KeyCode.LeftShift))
                 {
-                    rb.linearVelocity = new Vector2(moveInput * moveSpeed * 3, rb.linearVelocity.y);
+                    rb.linearVelocity = new Vector2(moveInput * moveSpeed * 2.5f, rb.linearVelocity.y);
+                    isRunning = true;
                 }
+                else isRunning = false;
                 //audioManager.PlayRunSound();
                 transform.localScale = new Vector3(-1, 1, 1);  //spriteRenderer.flipX= true;
                 turnRight = false;
-            }          
+            }
         }
     }
     //private bool holdShift => Input.GetKey(KeyCode.LeftShift);
@@ -478,9 +485,12 @@ public class PlayerController : MonoBehaviour
 
     private void UpdateAnimation()
     {
-        bool isRunning = Mathf.Abs(rb.linearVelocity.x) > 0.1f;
+        //bool isRunning = Mathf.Abs(rb.linearVelocity.x) > 0.1f;
+        bool isWalking = Mathf.Abs(rb.linearVelocity.x) > 0.1f;
         bool isJumping = !isGrounded;
-        
+
+        //animator.SetBool("isRunning", isRunning);
+        animator.SetBool("isWalking", isWalking);
         animator.SetBool("isRunning", isRunning);
         animator.SetBool("isJumping", isJumping);
         animator.SetBool("isWallSliding", isWallSliding);
