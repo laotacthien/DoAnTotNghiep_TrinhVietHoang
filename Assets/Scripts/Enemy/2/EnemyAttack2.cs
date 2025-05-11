@@ -10,14 +10,23 @@ public class EnemyAttack2 : MonoBehaviour
     public float attackCooldown = 1.5f;
     public int damage = 10;
 
+    [Header("Shooting (jush archer)")]
+    public float attackRange2 = 5f;
+    public float attackCooldown2 = 2f;
+
+
     private EnemyAI enemyAI;
     private Animator animator;
     private bool isAttacking = false;
+
+    private Shooting shooting;
 
     void Start()
     {
         enemyAI = GetComponent<EnemyAI>();
         animator = GetComponent<Animator>();
+
+        shooting = GetComponent<Shooting>();
     }
 
     void Update()
@@ -28,6 +37,10 @@ public class EnemyAttack2 : MonoBehaviour
         if (distance <= attackRange)
         {
             StartCoroutine(PerformAttack());
+        }
+        if(distance <= attackRange2)
+        {
+            StartCoroutine(PerformAttack2());
         }
     }
 
@@ -43,6 +56,27 @@ public class EnemyAttack2 : MonoBehaviour
         isAttacking = false;
         //enemyAI.isAttacking = false; // Cho phép di chuyển trở lại
     }
+    private IEnumerator PerformAttack2()
+    {
+        isAttacking = true;
+        enemyAI.isAttacking = true; // thông báo cho EnemyAI dừng di chuyển
+
+        animator.SetTrigger("Shoot");
+        
+        //animator.SetBool("isAttacking", isAttacking);
+        yield return new WaitForSeconds(0.4f); // thời gian delay trước khi bắn
+        
+        shooting.Shoot();
+        enemyAI.isAttacking = false; // Cho phép di chuyển trở lại
+        yield return new WaitForSeconds(attackCooldown2);
+        isAttacking = false;
+        
+    }
+    public void ArcherContinueChase()
+    {
+        enemyAI.isAttacking = false;
+    }
+
     public void EnableHitbox()
     {
         Collider2D player = Physics2D.OverlapCircle(attackPoint.position, attackRange, enemyAI.playerLayer);
@@ -54,5 +88,8 @@ public class EnemyAttack2 : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, attackRange2);
     }
 }
