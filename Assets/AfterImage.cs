@@ -2,15 +2,6 @@
 
 public class AfterImage : MonoBehaviour
 {
-    //public float lifeTime = 0.3f;
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    //void Start()
-    //{
-    //    Destroy(gameObject, lifeTime); // Tự xóa sau vài giây
-    //}
-
-    //public float lifeTime = 0.5f;  //1f;
     public float fadeSpeed = 0.3f;  //0.5f;
 
     private SpriteRenderer sr;

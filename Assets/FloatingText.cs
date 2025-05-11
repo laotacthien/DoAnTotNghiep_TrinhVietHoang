@@ -1,29 +1,28 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class FloatingText : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public float destroyTime = 3f;
-    public Vector3 offSet = new Vector3 (0f, 2f, 0f);
-    public Vector3 randomizeIntensity = new Vector3(0.5f, 0, 0);
-    void Start()
-    {
-        Destroy(gameObject, destroyTime);
+    public Vector3 offset = new Vector3(0f, 1f, 0f);
+    public Vector3 randomizeIntensity = new Vector3(0.5f, 0f, 0f);
 
-        transform.position += offSet;
-        transform.position += new Vector3(Random.Range(-randomizeIntensity.x, randomizeIntensity.x), 0, 0);
+    private Vector3 startPosition;
+
+    void OnEnable()
+    {
+        // Gán vị trí hiển thị
+        startPosition = transform.position + offset;
+        startPosition += new Vector3(Random.Range(-randomizeIntensity.x, randomizeIntensity.x), 0, 0);
+        transform.position = startPosition;
     }
-    //void Update()
-    //{
-    //    DirectionText();
-    //}
-    //void DirectionText()
-    //{
-    //    if(transform.localScale.x < 0)
-    //    {
-    //        Vector3 scale = transform.localScale;
-    //        scale.x *= -1;
-    //        transform.localScale = scale;
-    //    }
-    //}
+    
+    void Disable()
+    {
+        FloatingTextPool.Instance.ReturnToPool(gameObject);
+    }
+    void OnDisable()
+    {
+        CancelInvoke();
+    }
+
 }

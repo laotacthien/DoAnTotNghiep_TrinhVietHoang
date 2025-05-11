@@ -1,13 +1,13 @@
-﻿using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine;
 
-public class AfterImagePool : MonoBehaviour
+public class FloatingTextPool : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public static AfterImagePool Instance;
+    public static FloatingTextPool Instance;
 
-    public GameObject afterImagePrefab;
-    public int poolSize = 15;
+    public GameObject floatingTextPrefab;
+    public int poolSize = 10;
 
     private Queue<GameObject> pool = new Queue<GameObject>();
 
@@ -17,7 +17,7 @@ public class AfterImagePool : MonoBehaviour
 
         for (int i = 0; i < poolSize; i++)
         {
-            GameObject obj = Instantiate(afterImagePrefab);
+            GameObject obj = Instantiate(floatingTextPrefab);
             obj.SetActive(false);
             pool.Enqueue(obj);
         }
@@ -33,9 +33,7 @@ public class AfterImagePool : MonoBehaviour
         }
         else
         {
-            // Nếu hết pool thì tạo mới
-            GameObject obj = Instantiate(afterImagePrefab);
-            return obj;
+            return Instantiate(floatingTextPrefab);
         }
     }
 

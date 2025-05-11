@@ -20,6 +20,7 @@ public class EnemyTakeDamage : MonoBehaviour
     private Animator animator;
     private EnemyAI enemyAI;
     private EnemyMovement enemyMovement;
+    private PlayerAttack playerAttack;
 
     public GameObject floatingTextPrefab;
 
@@ -29,6 +30,7 @@ public class EnemyTakeDamage : MonoBehaviour
         animator = GetComponent<Animator>();
         enemyAI = GetComponent<EnemyAI>();
         enemyMovement = GetComponent<EnemyMovement>();
+        playerAttack = FindAnyObjectByType<PlayerAttack>();
 
         currentEnemyHealth = enemymaxHealth;
         enemyHealthBar.UpdateenemyHPBar(currentEnemyHealth, enemymaxHealth);
@@ -60,7 +62,8 @@ public class EnemyTakeDamage : MonoBehaviour
         // Hiển thị popup damage (floating text)
         if (floatingTextPrefab)
         {
-            ShowFloatingText();
+            //ShowFloatingText();
+            CreateFloatingText();
         }
 
         // Xử lý chết
@@ -105,16 +108,56 @@ public class EnemyTakeDamage : MonoBehaviour
 
         enemyAI.isAttacking = false; // Cho phép enemy di chuyển trở lại
     }
-    void ShowFloatingText()
-    {
-        //var go = Instantiate(floatingTextPrefab, transform.position, Quaternion.identity, transform);
-        var go = Instantiate(floatingTextPrefab, transform.position + new Vector3(0, 0.3f, 0), Quaternion.identity); // không có parent  (để đảm bảo text luôn hướng đúng chiều)
-        go.GetComponent<TextMesh>().text = currentEnemyHealth.ToString();
+    //void ShowFloatingText()
+    //{
+    //    //var go = Instantiate(floatingTextPrefab, transform.position, Quaternion.identity, transform);
+    //    var go = Instantiate(floatingTextPrefab, transform.position + new Vector3(0, 0.3f, 0), Quaternion.identity); // không có parent  (để đảm bảo text luôn hướng đúng chiều)
+    //    //go.GetComponent<TextMesh>().text = currentEnemyHealth.ToString();
+    //    if(playerAttack.comboStep == 1)
+    //    {
+    //        go.GetComponent<TextMesh>().text = playerAttack.attackDamage.ToString();
+    //    }
+    //    else if(playerAttack.comboStep == 2)
+    //    {
+    //        go.GetComponent<TextMesh>().text = (playerAttack.attackDamage + 10).ToString();
+    //    }
+    //    else go.GetComponent<TextMesh>().text = (playerAttack.attackDamage + 20).ToString();
 
-        // Đảm bảo luôn hiển thị phía trước các tilemap hoặc foreground
-        var meshRenderer = go.GetComponent<MeshRenderer>();
-        meshRenderer.sortingLayerName = "UI";       
-        meshRenderer.sortingOrder = 10;             // số càng cao càng nằm phía trên
+    //    // Đảm bảo luôn hiển thị phía trước các tilemap hoặc foreground
+    //    var meshRenderer = go.GetComponent<MeshRenderer>();
+    //    meshRenderer.sortingLayerName = "UI";       
+    //    meshRenderer.sortingOrder = 10;             // số càng cao càng nằm phía trên
+    //}
+    void CreateFloatingText()
+    {
+        // Lấy từ object pool
+        GameObject go = FloatingTextPool.Instance.GetFromPool();
+
+        // tắt popup trước khi đặt vị trí
+        go.SetActive(false);
+
+        // Đặt vị trí gốc (trước khi áp dụng offset)
+        go.transform.position = transform.position;
+        go.transform.rotation = Quaternion.identity; // reset xoay nếu cần
+
+        // bật popup để kích hoạt OnEnable()
+        go.SetActive(true);
+
+        // hiển thị sát thương
+        int damage = playerAttack.attackDamage;
+        if (playerAttack.comboStep == 2)
+            damage += 10;
+        else if (playerAttack.comboStep == 3)
+            damage += 20;
+
+        // Gán damage vào text
+        TextMesh textMesh = go.GetComponent<TextMesh>();
+        textMesh.text = "- " + damage.ToString();
+
+        // Luôn hiển thị phía trên các tile
+        MeshRenderer meshRenderer = go.GetComponent<MeshRenderer>();
+        meshRenderer.sortingLayerName = "UI";
+        meshRenderer.sortingOrder = 10;
     }
 
     void Die()

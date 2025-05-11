@@ -77,6 +77,7 @@
     <Compile Include="Assets\Scripts\EnemyAttack2.cs" />
     <Compile Include="Assets\Scripts\ParallaxController.cs" />
     <Compile Include="Assets\DontdestroyAudioManager.cs" />
+    <Compile Include="Assets\FloatingTextPool.cs" />
     <Compile Include="Assets\AfterImage.cs" />
     <Compile Include="Assets\Scripts\FinishPoint.cs" />
     <Compile Include="Assets\Scripts\PlayerCollision.cs" />

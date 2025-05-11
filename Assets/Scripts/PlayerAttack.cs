@@ -11,7 +11,7 @@ public class PlayerAttack : MonoBehaviour
     public int attackDamage = 20;
     public LayerMask enemyLayers;
 
-    private int comboStep = 0;  // Đếm số lần nhấn
+    public int comboStep = 0;  // Đếm số lần nhấn
     private float lastAttackTime;
     public float comboResetTime = 1.0f;  // Thời gian reset combo
     private bool canAttack = true;
@@ -153,13 +153,22 @@ public class PlayerAttack : MonoBehaviour
         {
             // Tính hướng knockback từ player tới enemy
             Vector2 knockbackDirection = (enemy.transform.position - transform.position).normalized;
+            if(comboStep == 1)
+            {
+                enemy.GetComponent<EnemyTakeDamage>().TakeDamage(attackDamage, knockbackDirection);
+            }
+            else if(comboStep == 2)
+            {
+                enemy.GetComponent<EnemyTakeDamage>().TakeDamage(attackDamage + 10, knockbackDirection);
+            }
+            else enemy.GetComponent<EnemyTakeDamage>().TakeDamage(attackDamage + 20, knockbackDirection);
 
-            if(holySlash)
+            if (holySlash)
             {
                 enemy.GetComponent<EnemyTakeDamage>().TakeDamage(attackDamage * 10, knockbackDirection);
                 holySlash = false;
             }
-            else enemy.GetComponent<EnemyTakeDamage>().TakeDamage(attackDamage, knockbackDirection);
+            
         }
     }
 

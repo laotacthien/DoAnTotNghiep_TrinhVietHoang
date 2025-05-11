@@ -211,7 +211,7 @@ public class PlayerController : MonoBehaviour
 
             if (moveInput > 0)
             {
-                if (Input.GetKey(KeyCode.LeftShift))
+                if (Input.GetKey(KeyCode.CapsLock))
                 {
                     rb.linearVelocity = new Vector2(moveInput * moveSpeed * 3, rb.linearVelocity.y);
                     isRunning = true;
@@ -223,7 +223,7 @@ public class PlayerController : MonoBehaviour
             }
             else if (moveInput < 0) 
             {
-                if (Input.GetKey(KeyCode.LeftShift))
+                if (Input.GetKey(KeyCode.CapsLock))
                 {
                     rb.linearVelocity = new Vector2(moveInput * moveSpeed * 2.5f, rb.linearVelocity.y);
                     isRunning = true;
