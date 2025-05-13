@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Assets\TranningPlayer.cs" />
     <Compile Include="Assets\SkillCooldownUI.cs" />
+    <Compile Include="Assets\PlayerRespawn.cs" />
     <Compile Include="Assets\DontdestroyCamera.cs" />
     <Compile Include="Assets\Scripts\EnemyHealthBar.cs" />
     <Compile Include="Assets\Scripts\AudioManager.cs" />
@@ -81,6 +82,7 @@
     <Compile Include="Assets\Scripts\FinishPoint.cs" />
     <Compile Include="Assets\Scripts\PlayerCollision.cs" />
     <Compile Include="Assets\UISoundController.cs" />
+    <Compile Include="Assets\CheckPoint.cs" />
     <Compile Include="Assets\Shooting.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
     <Compile Include="Assets\Scripts\PlayerAttack.cs" />

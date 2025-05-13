@@ -1,52 +1,58 @@
 fileFormatVersion: 2
-guid: d5a1b2745c2bfe5479d3e07250dbe3d3
+guid: 05888ea37af6f79498e08527fe54d47a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2472774836433799265
-    second: "\u2014Pngtree\u2014wood style game buttons pack_600246_0"
+      213: 3763649122343108368
+    second: mage_guardian-magenta_0
   - first:
-      213: -1449706434596635479
-    second: "\u2014Pngtree\u2014wood style game buttons pack_600246_1"
+      213: -7673272456650097495
+    second: mage_guardian-magenta_1
   - first:
-      213: -4723732222451367094
-    second: "\u2014Pngtree\u2014wood style game buttons pack_600246_2"
+      213: 2187906530577837233
+    second: mage_guardian-magenta_2
   - first:
-      213: -1023080769975801501
-    second: "\u2014Pngtree\u2014wood style game buttons pack_600246_3"
+      213: -1427959775878062496
+    second: mage_guardian-magenta_3
   - first:
-      213: -3217236336514453549
-    second: "\u2014Pngtree\u2014wood style game buttons pack_600246_4"
+      213: -5268072034256450629
+    second: mage_guardian-magenta_4
   - first:
-      213: -3430223902333738004
-    second: "\u2014Pngtree\u2014wood style game buttons pack_600246_5"
+      213: -6142668481374580618
+    second: mage_guardian-magenta_5
   - first:
-      213: -7988607305840942223
-    second: "\u2014Pngtree\u2014wood style game buttons pack_600246_6"
+      213: 7656194639009379131
+    second: mage_guardian-magenta_6
   - first:
-      213: -3868362388038908171
-    second: "\u2014Pngtree\u2014wood style game buttons pack_600246_7"
+      213: 452096450877974489
+    second: mage_guardian-magenta_7
   - first:
-      213: 2964868888776542630
-    second: "\u2014Pngtree\u2014wood style game buttons pack_600246_8"
+      213: -7450016663419565244
+    second: mage_guardian-magenta_8
   - first:
-      213: -5830958980248288530
-    second: "\u2014Pngtree\u2014wood style game buttons pack_600246_9"
+      213: 2561672803153499519
+    second: mage_guardian-magenta_9
   - first:
-      213: 143770454667719095
-    second: "\u2014Pngtree\u2014wood style game buttons pack_600246_10"
+      213: 9147026623122007903
+    second: mage_guardian-magenta_10
   - first:
-      213: 6750742571273005047
-    second: "\u2014Pngtree\u2014wood style game buttons pack_600246_11"
+      213: 5728707175456056263
+    second: mage_guardian-magenta_11
   - first:
-      213: -1700194231820974538
-    second: "\u2014Pngtree\u2014wood style game buttons pack_600246_12"
+      213: -5706832697469619022
+    second: mage_guardian-magenta_12
   - first:
-      213: -5753619133622860318
-    second: "\u2014Pngtree\u2014wood style game buttons pack_600246_13"
+      213: 1422636281239544470
+    second: mage_guardian-magenta_13
   - first:
-      213: -4454132072824322571
-    second: "\u2014Pngtree\u2014wood style game buttons pack_600246_14"
+      213: -78628119812621925
+    second: mage_guardian-magenta_14
+  - first:
+      213: -3691837544191183369
+    second: mage_guardian-magenta_15
+  - first:
+      213: -366144370990080376
+    second: mage_guardian-magenta_16
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -142,13 +148,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\u2014Pngtree\u2014wood style game buttons pack_600246_0"
+      name: mage_guardian-magenta_0
       rect:
         serializedVersion: 2
-        x: 43
-        y: 982
-        width: 338
-        height: 133
+        x: 15
+        y: 4
+        width: 35
+        height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -157,20 +163,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f97b6d83360feadd0800000000000000
-      internalID: -2472774836433799265
+      spriteID: 01fb874afea2b3430800000000000000
+      internalID: 3763649122343108368
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u2014Pngtree\u2014wood style game buttons pack_600246_1"
+      name: mage_guardian-magenta_1
       rect:
         serializedVersion: 2
-        x: 430
-        y: 983
-        width: 338
-        height: 133
+        x: 79
+        y: 4
+        width: 35
+        height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +185,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9acf449bdab91ebe0800000000000000
-      internalID: -1449706434596635479
+      spriteID: 9acf49cfa5f038590800000000000000
+      internalID: -7673272456650097495
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u2014Pngtree\u2014wood style game buttons pack_600246_2"
+      name: mage_guardian-magenta_2
       rect:
         serializedVersion: 2
-        x: 804
-        y: 982
-        width: 348
-        height: 133
+        x: 143
+        y: 4
+        width: 35
+        height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -201,20 +207,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a4348b2329ee17eb0800000000000000
-      internalID: -4723732222451367094
+      spriteID: 1bc69d4c5610d5e10800000000000000
+      internalID: 2187906530577837233
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u2014Pngtree\u2014wood style game buttons pack_600246_3"
+      name: mage_guardian-magenta_3
       rect:
         serializedVersion: 2
-        x: 43
-        y: 759
-        width: 338
-        height: 133
+        x: 207
+        y: 4
+        width: 35
+        height: 59
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,20 +229,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3692f01d5794dc1f0800000000000000
-      internalID: -1023080769975801501
+      spriteID: 06edd35462ede2ce0800000000000000
+      internalID: -1427959775878062496
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u2014Pngtree\u2014wood style game buttons pack_600246_4"
+      name: mage_guardian-magenta_4
       rect:
         serializedVersion: 2
-        x: 430
-        y: 759
-        width: 338
-        height: 133
+        x: 271
+        y: 5
+        width: 35
+        height: 59
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -245,20 +251,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3dfa39bf8941a53d0800000000000000
-      internalID: -3217236336514453549
+      spriteID: bbb89f2756c04e6b0800000000000000
+      internalID: -5268072034256450629
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u2014Pngtree\u2014wood style game buttons pack_600246_5"
+      name: mage_guardian-magenta_5
       rect:
         serializedVersion: 2
-        x: 796
-        y: 758
-        width: 355
-        height: 133
+        x: 335
+        y: 5
+        width: 35
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -267,20 +273,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ce3e751f8856560d0800000000000000
-      internalID: -3430223902333738004
+      spriteID: 6701eaabf8bd0caa0800000000000000
+      internalID: -6142668481374580618
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u2014Pngtree\u2014wood style game buttons pack_600246_6"
+      name: mage_guardian-magenta_6
       rect:
         serializedVersion: 2
-        x: 43
-        y: 533
-        width: 338
-        height: 133
+        x: 336
+        y: 15
+        width: 30
+        height: 49
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -289,20 +295,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 173a2451bf3c22190800000000000000
-      internalID: -7988607305840942223
+      spriteID: b33776db574404a60800000000000000
+      internalID: 7656194639009379131
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u2014Pngtree\u2014wood style game buttons pack_600246_7"
+      name: mage_guardian-magenta_7
       rect:
         serializedVersion: 2
-        x: 431
-        y: 533
-        width: 338
-        height: 133
+        x: 399
+        y: 4
+        width: 35
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -311,20 +317,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5f6857e47e0d05ac0800000000000000
-      internalID: -3868362388038908171
+      spriteID: 9d7ebc6a35b264600800000000000000
+      internalID: 452096450877974489
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u2014Pngtree\u2014wood style game buttons pack_600246_8"
+      name: mage_guardian-magenta_8
       rect:
         serializedVersion: 2
-        x: 797
-        y: 535
-        width: 356
-        height: 133
+        x: 400
+        y: 17
+        width: 30
+        height: 47
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -333,20 +339,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6a90229bb84552920800000000000000
-      internalID: 2964868888776542630
+      spriteID: 44bc22601593c9890800000000000000
+      internalID: -7450016663419565244
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u2014Pngtree\u2014wood style game buttons pack_600246_9"
+      name: mage_guardian-magenta_9
       rect:
         serializedVersion: 2
-        x: 41
-        y: 309
-        width: 338
-        height: 133
+        x: 463
+        y: 4
+        width: 35
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -355,20 +361,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ee24d6283b5441fa0800000000000000
-      internalID: -5830958980248288530
+      spriteID: f755eb697d3ec8320800000000000000
+      internalID: 2561672803153499519
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u2014Pngtree\u2014wood style game buttons pack_600246_10"
+      name: mage_guardian-magenta_10
       rect:
         serializedVersion: 2
-        x: 431
-        y: 309
-        width: 338
-        height: 133
+        x: 527
+        y: 4
+        width: 35
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -377,20 +383,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7b17aaf7776cef100800000000000000
-      internalID: 143770454667719095
+      spriteID: f576a3e2044c0fe70800000000000000
+      internalID: 9147026623122007903
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u2014Pngtree\u2014wood style game buttons pack_600246_11"
+      name: mage_guardian-magenta_11
       rect:
         serializedVersion: 2
-        x: 802
-        y: 310
-        width: 352
-        height: 133
+        x: 530
+        y: 16
+        width: 28
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -399,20 +405,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7f7a5d20a947fad50800000000000000
-      internalID: 6750742571273005047
+      spriteID: 7c32a47f2d4708f40800000000000000
+      internalID: 5728707175456056263
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u2014Pngtree\u2014wood style game buttons pack_600246_12"
+      name: mage_guardian-magenta_12
       rect:
         serializedVersion: 2
-        x: 40
-        y: 101
-        width: 338
-        height: 133
+        x: 591
+        y: 4
+        width: 35
+        height: 59
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -421,20 +427,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 636842baa52b768e0800000000000000
-      internalID: -1700194231820974538
+      spriteID: 2b43db2d5e14dc0b0800000000000000
+      internalID: -5706832697469619022
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u2014Pngtree\u2014wood style game buttons pack_600246_13"
+      name: mage_guardian-magenta_13
       rect:
         serializedVersion: 2
-        x: 430
-        y: 101
-        width: 338
-        height: 133
+        x: 655
+        y: 4
+        width: 35
+        height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -443,20 +449,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2e5c487c1e90720b0800000000000000
-      internalID: -5753619133622860318
+      spriteID: 692addb09283eb310800000000000000
+      internalID: 1422636281239544470
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u2014Pngtree\u2014wood style game buttons pack_600246_14"
+      name: mage_guardian-magenta_14
       rect:
         serializedVersion: 2
-        x: 795
-        y: 101
-        width: 360
-        height: 133
+        x: 719
+        y: 5
+        width: 35
+        height: 57
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -465,8 +471,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5f5c1a09a7ebf22c0800000000000000
-      internalID: -4454132072824322571
+      spriteID: b9936314428a8eef0800000000000000
+      internalID: -78628119812621925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mage_guardian-magenta_15
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 5
+        width: 35
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f5b8025055f3ccc0800000000000000
+      internalID: -3691837544191183369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mage_guardian-magenta_16
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 4
+        width: 35
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88e90ae62a13beaf0800000000000000
+      internalID: -366144370990080376
       vertices: []
       indices: 
       edges: []
@@ -485,21 +535,23 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "\u2014Pngtree\u2014wood style game buttons pack_600246_0": -2472774836433799265
-      "\u2014Pngtree\u2014wood style game buttons pack_600246_1": -1449706434596635479
-      "\u2014Pngtree\u2014wood style game buttons pack_600246_10": 143770454667719095
-      "\u2014Pngtree\u2014wood style game buttons pack_600246_11": 6750742571273005047
-      "\u2014Pngtree\u2014wood style game buttons pack_600246_12": -1700194231820974538
-      "\u2014Pngtree\u2014wood style game buttons pack_600246_13": -5753619133622860318
-      "\u2014Pngtree\u2014wood style game buttons pack_600246_14": -4454132072824322571
-      "\u2014Pngtree\u2014wood style game buttons pack_600246_2": -4723732222451367094
-      "\u2014Pngtree\u2014wood style game buttons pack_600246_3": -1023080769975801501
-      "\u2014Pngtree\u2014wood style game buttons pack_600246_4": -3217236336514453549
-      "\u2014Pngtree\u2014wood style game buttons pack_600246_5": -3430223902333738004
-      "\u2014Pngtree\u2014wood style game buttons pack_600246_6": -7988607305840942223
-      "\u2014Pngtree\u2014wood style game buttons pack_600246_7": -3868362388038908171
-      "\u2014Pngtree\u2014wood style game buttons pack_600246_8": 2964868888776542630
-      "\u2014Pngtree\u2014wood style game buttons pack_600246_9": -5830958980248288530
+      mage_guardian-magenta_0: 3763649122343108368
+      mage_guardian-magenta_1: -7673272456650097495
+      mage_guardian-magenta_10: 9147026623122007903
+      mage_guardian-magenta_11: 5728707175456056263
+      mage_guardian-magenta_12: -5706832697469619022
+      mage_guardian-magenta_13: 1422636281239544470
+      mage_guardian-magenta_14: -78628119812621925
+      mage_guardian-magenta_15: -3691837544191183369
+      mage_guardian-magenta_16: -366144370990080376
+      mage_guardian-magenta_2: 2187906530577837233
+      mage_guardian-magenta_3: -1427959775878062496
+      mage_guardian-magenta_4: -5268072034256450629
+      mage_guardian-magenta_5: -6142668481374580618
+      mage_guardian-magenta_6: 7656194639009379131
+      mage_guardian-magenta_7: 452096450877974489
+      mage_guardian-magenta_8: -7450016663419565244
+      mage_guardian-magenta_9: 2561672803153499519
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

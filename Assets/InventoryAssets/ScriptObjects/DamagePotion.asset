@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e79d9cd446f1f34eac235867d6f3454, type: 3}
   m_Name: DamagePotion
   m_EditorClassIdentifier: 
-  id: 0
-  itemName: 
-  value: 0
-  image: {fileID: 0}
+  id: 3
+  itemName: DamagePotion
+  value: 10
+  image: {fileID: -951411632, guid: 43eddf001b1c1e2489ba5c10c0e2293d, type: 3}

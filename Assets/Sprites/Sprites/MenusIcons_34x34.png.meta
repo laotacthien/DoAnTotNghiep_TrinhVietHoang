@@ -1,28 +1,19 @@
 fileFormatVersion: 2
-guid: f0089b251c8869f48a506cc5bc25a1d5
+guid: 2de392d5fdb88ec4b91ef374b6800e83
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6158802113039044628
-    second: props_0
+      213: -4886925978764846218
+    second: MenusIcons_34x34_0
   - first:
-      213: -5693590246162419906
-    second: props_1
+      213: -1934401166720496741
+    second: MenusIcons_34x34_1
   - first:
-      213: 5113305516112643439
-    second: props_2
+      213: -2517394315501486498
+    second: MenusIcons_34x34_2
   - first:
-      213: -8689035635190686027
-    second: props_3
-  - first:
-      213: -7340963149319210717
-    second: props_4
-  - first:
-      213: -2011216184659823745
-    second: props_5
-  - first:
-      213: 5618000101936168721
-    second: props_6
+      213: 7213936854024323504
+    second: MenusIcons_34x34_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -69,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 20
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -118,13 +109,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: props_0
+      name: MenusIcons_34x34_0
       rect:
         serializedVersion: 2
-        x: 56
-        y: 175
-        width: 38
-        height: 37
+        x: 5
+        y: 8
+        width: 23
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -133,107 +124,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4101e9d14e5787550800000000000000
-      internalID: 6158802113039044628
+      spriteID: 67bd710e6b62e2cb0800000000000000
+      internalID: -4886925978764846218
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: props_1
+      name: MenusIcons_34x34_1
       rect:
         serializedVersion: 2
-        x: 118
-        y: 13
-        width: 212
-        height: 225
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e3f2cd846dd4cf0b0800000000000000
-      internalID: -5693590246162419906
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: props_2
-      rect:
-        serializedVersion: 2
-        x: 351
-        y: 31
-        width: 183
-        height: 159
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f6580f3864c16f640800000000000000
-      internalID: 5113305516112643439
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: props_3
-      rect:
-        serializedVersion: 2
-        x: 7
-        y: 111
-        width: 50
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5be9fb350285a6780800000000000000
-      internalID: -8689035635190686027
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: props_4
-      rect:
-        serializedVersion: 2
-        x: 62
-        y: 106
-        width: 39
-        height: 55
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3297897e8e8af1a90800000000000000
-      internalID: -7340963149319210717
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: props_5
-      rect:
-        serializedVersion: 2
-        x: 30
-        y: 31
+        x: 39
+        y: 4
         width: 24
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9b06844360a725e0800000000000000
+      internalID: -1934401166720496741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenusIcons_34x34_2
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 4
+        width: 22
         height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -243,20 +168,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f73b5d23989b614e0800000000000000
-      internalID: -2011216184659823745
+      spriteID: e5e32f0353b601dd0800000000000000
+      internalID: -2517394315501486498
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: props_6
+      name: MenusIcons_34x34_3
       rect:
         serializedVersion: 2
-        x: 75
-        y: 31
-        width: 24
-        height: 34
+        x: 109
+        y: 6
+        width: 22
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -265,8 +190,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 11f7308c35527fd40800000000000000
-      internalID: 5618000101936168721
+      spriteID: 0b10830095d0d1460800000000000000
+      internalID: 7213936854024323504
       vertices: []
       indices: 
       edges: []
@@ -285,13 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      props_0: 6158802113039044628
-      props_1: -5693590246162419906
-      props_2: 5113305516112643439
-      props_3: -8689035635190686027
-      props_4: -7340963149319210717
-      props_5: -2011216184659823745
-      props_6: 5618000101936168721
+      MenusIcons_34x34_0: -4886925978764846218
+      MenusIcons_34x34_1: -1934401166720496741
+      MenusIcons_34x34_2: -2517394315501486498
+      MenusIcons_34x34_3: 7213936854024323504
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

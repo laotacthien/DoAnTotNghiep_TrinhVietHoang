@@ -24,6 +24,10 @@ public class GameManager : MonoBehaviour
     //số tiền trong shop
     [SerializeField] private TextMeshProUGUI scoreText3;
 
+    //số lần có thể hồi sinh
+    public int respawnNumber = 5;
+    [SerializeField] private TextMeshProUGUI respawnText;
+
     //cập nhật thanh máu player
     public void UpdateHPBar(float currentHealth, float maxHealth)
     {
@@ -36,6 +40,12 @@ public class GameManager : MonoBehaviour
     public void UpdateEnergyBar(float currentEnergy, float maxEnergy)
     {
         energyBar.fillAmount = currentEnergy / maxEnergy;
+    }
+
+    //cập nhật số lần hồi sinh
+    public void UpdateRespawn()
+    {
+        respawnText.text = "x " + respawnNumber.ToString();
     }
 
     //cập nhật thông tin trong PlayerInfo

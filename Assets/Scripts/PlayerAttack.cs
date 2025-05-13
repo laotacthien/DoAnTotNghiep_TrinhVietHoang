@@ -28,7 +28,7 @@ public class PlayerAttack : MonoBehaviour
     private GameManager gameManager;
     public GameManager hPBar; //quuản lý thanh máu
     public int PlayermaxHealth = 200;
-    private int currentPlayerHealth;
+    public int currentPlayerHealth;
     
 
     // Knockback
@@ -84,6 +84,7 @@ public class PlayerAttack : MonoBehaviour
 
         gameManager.UpdateHealthText(currentPlayerHealth);
         gameManager.UpdateDamageText(attackDamage);
+        gameManager.UpdateRespawn();
 
         if (holySlashCooldownTimer > 0)
             holySlashCooldownTimer -= Time.deltaTime;
@@ -210,7 +211,9 @@ public class PlayerAttack : MonoBehaviour
 
         if (currentPlayerHealth <= 0)
         {
-            gameManager.GameOver();
+            //gameManager.GameOver();
+            FindAnyObjectByType<PlayerRespawn>().Die();
+            
         }
         else
         {
