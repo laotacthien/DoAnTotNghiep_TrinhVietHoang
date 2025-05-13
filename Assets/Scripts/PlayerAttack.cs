@@ -264,4 +264,13 @@ public class PlayerAttack : MonoBehaviour
         }
         Debug.Log("Player healed! Current Health: " + currentPlayerHealth);
     }
+    public void DamageUp(int amount)
+    {
+        attackDamage += amount;
+        //animator.SetTrigger("DamageUp");
+        if(attackDamage > 60)
+        {
+            attackDamage = 60; //giới hạn damage tối đa cho đòn tấn công thường
+        }
+    }
 }

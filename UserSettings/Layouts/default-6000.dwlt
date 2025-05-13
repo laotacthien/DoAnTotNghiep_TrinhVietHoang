@@ -217,8 +217,8 @@ MonoBehaviour:
     y: 0
     width: 276
     height: 448
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 226}
+  m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -301,8 +301,8 @@ MonoBehaviour:
     y: 0
     width: 326.40002
     height: 724.8
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 76}
+  m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 22}
   m_Panes:
   - {fileID: 22}
@@ -432,7 +432,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 79.200005
+    y: 24
     width: 275
     height: 422
   m_SerializedDataModeController:
@@ -449,8 +449,8 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 9cc40000
-      m_LastClickedID: 50332
+      m_SelectedIDs: 
+      m_LastClickedID: 0
       m_ExpandedIDs: 0cfbfffffac30000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
@@ -497,8 +497,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Scene\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 276
-    y: 79.200005
+    x: 277
+    y: 24
     width: 931.6
     height: 422
   m_SerializedDataModeController:
@@ -1487,7 +1487,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 527.2
+    y: 472
     width: 1208.6
     height: 250.79999
   m_SerializedDataModeController:
@@ -1531,7 +1531,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 233.20001}
     m_SelectedIDs: 1ede0000
     m_LastClickedID: 56862
-    m_ExpandedIDs: 0000000004d4000006d4000008d400000ad4000010de000020de000000ca9a3b
+    m_ExpandedIDs: 0000000004d4000006d4000008d400000ad40000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1714,8 +1714,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Inspector\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1209.6
-    y: 79.200005
+    x: 1210.6
+    y: 24
     width: 325.40002
     height: 698.8
   m_SerializedDataModeController:

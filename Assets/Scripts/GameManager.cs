@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    private int score = 0; // tính điểm
+    public int score = 0; // tính điểm
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private GameObject gameOverUI;
     [SerializeField] private GameObject gameWinUI;
@@ -20,6 +20,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI energyText;
     [SerializeField] private TextMeshProUGUI damageText;
     [SerializeField] private TextMeshProUGUI scoreText2;
+
+    //số tiền trong shop
+    [SerializeField] private TextMeshProUGUI scoreText3;
 
     //cập nhật thanh máu player
     public void UpdateHPBar(float currentHealth, float maxHealth)
@@ -70,7 +73,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void UpdateScore()
+    public void UpdateScore()
     {
         if (scoreText == null)
         {
@@ -79,6 +82,7 @@ public class GameManager : MonoBehaviour
         }
         scoreText.text = score.ToString();
         scoreText2.text = score.ToString();
+        scoreText3.text = score.ToString();
     }
 
     public void GameOver()

@@ -24,6 +24,10 @@ public class ItemUIController : MonoBehaviour
             case "EnergyPotion":
                 FindAnyObjectByType<PlayerController>().HealEnergy(item.value);
                 break;
+            case "DamagePotion":
+                FindAnyObjectByType<PlayerAttack>().DamageUp(item.value); 
+                break;
+
         }
     }
 }
