@@ -34,11 +34,11 @@ public class EnemyAttack2 : MonoBehaviour
         if (enemyAI.Player == null || isAttacking) return;
 
         float distance = Vector2.Distance(transform.position, enemyAI.Player.position);
-        if (distance <= attackRange)
+        if (distance <= attackRange * 2)
         {
             StartCoroutine(PerformAttack());
         }
-        if(distance <= attackRange2)
+        else if(distance <= attackRange2)
         {
             StartCoroutine(PerformAttack2());
         }
@@ -61,27 +61,40 @@ public class EnemyAttack2 : MonoBehaviour
         isAttacking = true;
         enemyAI.isAttacking = true; // thông báo cho EnemyAI dừng di chuyển
 
+        // Kiểm tra lại line of sight trước khi bắn
+        if (!enemyAI.HasLineOfSight(enemyAI.Player))
+        {
+            isAttacking = false;
+            enemyAI.isAttacking = false;
+            yield break;
+        }
+
         animator.SetTrigger("Shoot");
         
         //animator.SetBool("isAttacking", isAttacking);
-        yield return new WaitForSeconds(0.4f); // thời gian delay trước khi bắn
-        
-        shooting.Shoot();
-        enemyAI.isAttacking = false; // Cho phép di chuyển trở lại
+
+        //yield return new WaitForSeconds(0.4f); // thời gian delay trước khi bắn
+        //shooting.Shoot();
+
+        //enemyAI.isAttacking = false; // Cho phép di chuyển trở lại
         yield return new WaitForSeconds(attackCooldown2);
         isAttacking = false;
         
     }
-    public void ArcherContinueChase()
+    public void EnemyShoot()
     {
-        enemyAI.isAttacking = false;
+        shooting.Shoot();
+    }
+    public void EnemyContinueChase()
+    {
+        enemyAI.isAttacking = false; // Cho phép enemy di chuyển trở lại
     }
 
     public void EnableHitbox()
     {
         Collider2D player = Physics2D.OverlapCircle(attackPoint.position, attackRange, enemyAI.playerLayer);
         player?.GetComponent<PlayerAttack>()?.PlayerTakeDamage(damage);
-        enemyAI.isAttacking = false; // Cho phép enemy di chuyển trở lại
+        //enemyAI.isAttacking = false; // Cho phép enemy di chuyển trở lại
     }
 
     private void OnDrawGizmosSelected()

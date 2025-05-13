@@ -266,13 +266,21 @@ public class PlayerController : MonoBehaviour
                 }
                 else
                 {
-                    audioManager.PlayDashSound();
-                    rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce * 2f);
+                    //audioManager.PlayDashSound();
+                    //rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce * 2f);
+                    StartCoroutine(HighJump());
                 }
             }
         }
 
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+    }
+    private IEnumerator HighJump()
+    {
+        animator.SetTrigger("HighJump");
+        yield return new WaitForSeconds(0.6f);
+        audioManager.PlayDashSound();
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce * 2f);
     }
 
     void Dash()

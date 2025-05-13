@@ -109,7 +109,7 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    private bool HasLineOfSight(Transform target)
+    public bool HasLineOfSight(Transform target)
     {
         if (target == null) return false;
 
