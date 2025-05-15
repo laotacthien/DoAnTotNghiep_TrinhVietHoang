@@ -13,7 +13,7 @@ public class EnemyTakeDamage : MonoBehaviour
     [Header("Knockback Settings")]
     public float knockbackDuration = 0.2f;
     public float knockbackForce = 5f;
-    private bool isKnockback = false;
+    public bool isKnockback = false;
     private float knockbackTimer;
 
     private Rigidbody2D rb;

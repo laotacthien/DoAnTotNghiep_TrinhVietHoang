@@ -109,15 +109,34 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
+    //public bool HasLineOfSight(Transform target)
+    //{
+    //    if (target == null) return false;
+
+    //    Vector2 direction = (target.position - transform.position).normalized;
+    //    RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, detectionRadius, obstacleLayer);
+
+    //    // Chỉ trả về true nếu không có vật cản hoặc vật cản là chính player
+    //    return hit.collider == null || hit.collider.transform == target;
+    //}
+
     public bool HasLineOfSight(Transform target)
     {
         if (target == null) return false;
 
         Vector2 direction = (target.position - transform.position).normalized;
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, detectionRadius, obstacleLayer);
+        float distance = Vector2.Distance(transform.position, target.position);
 
-        // Chỉ trả về true nếu không có vật cản hoặc vật cản là chính player
-        return hit.collider == null || hit.collider.transform == target;
+        RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, direction, distance, obstacleLayer);
+        foreach (var hit in hits)
+        {
+            if (hit.collider != null && hit.collider.transform != target)
+            {
+                return false; // Có vật cản chắn ngang
+            }
+        }
+
+        return true;
     }
 
     private void HandleChaseBehavior()

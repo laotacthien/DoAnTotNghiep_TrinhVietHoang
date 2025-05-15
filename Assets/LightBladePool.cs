@@ -1,13 +1,13 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class ArrowPool : MonoBehaviour
+public class LightBladePool : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public static ArrowPool Instance;
+    public static LightBladePool Instance;
 
-    public GameObject arrowPrefab;
-    public int poolSize = 5;
+    public GameObject lightBladePrefab;
+    public int poolSize = 1;
 
     private Queue<GameObject> pool = new Queue<GameObject>();
 
@@ -17,7 +17,7 @@ public class ArrowPool : MonoBehaviour
 
         for (int i = 0; i < poolSize; i++)
         {
-            GameObject obj = Instantiate(arrowPrefab);
+            GameObject obj = Instantiate(lightBladePrefab);
             obj.SetActive(false);
             pool.Enqueue(obj);
         }
@@ -34,7 +34,7 @@ public class ArrowPool : MonoBehaviour
         else
         {
             // Nếu hết pool thì tạo mới
-            GameObject obj = Instantiate(arrowPrefab);
+            GameObject obj = Instantiate(lightBladePrefab);
             return obj;
         }
     }

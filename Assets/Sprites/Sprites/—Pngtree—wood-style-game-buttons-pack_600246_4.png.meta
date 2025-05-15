@@ -1,0 +1,507 @@
+fileFormatVersion: 2
+guid: 471ed0cf4d7885e4cb1dfe25b29a7d3c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1669355340338535582
+    second: "\u2014Pngtree\u2014wood-style-game-buttons-pack_600246_4_0"
+  - first:
+      213: -8932962538668711478
+    second: "\u2014Pngtree\u2014wood-style-game-buttons-pack_600246_4_1"
+  - first:
+      213: -376019724689874968
+    second: "\u2014Pngtree\u2014wood-style-game-buttons-pack_600246_4_2"
+  - first:
+      213: -8918451368434713485
+    second: "\u2014Pngtree\u2014wood-style-game-buttons-pack_600246_4_3"
+  - first:
+      213: -6415527624717751200
+    second: "\u2014Pngtree\u2014wood-style-game-buttons-pack_600246_4_4"
+  - first:
+      213: 9072431489294648272
+    second: "\u2014Pngtree\u2014wood-style-game-buttons-pack_600246_4_5"
+  - first:
+      213: -24160502078925468
+    second: "\u2014Pngtree\u2014wood-style-game-buttons-pack_600246_4_6"
+  - first:
+      213: 1239906231212602594
+    second: "\u2014Pngtree\u2014wood-style-game-buttons-pack_600246_4_7"
+  - first:
+      213: 8447006706980348772
+    second: "\u2014Pngtree\u2014wood-style-game-buttons-pack_600246_4_8"
+  - first:
+      213: 2892348988693376955
+    second: "\u2014Pngtree\u2014wood-style-game-buttons-pack_600246_4_9"
+  - first:
+      213: -1093363252319608005
+    second: "\u2014Pngtree\u2014wood-style-game-buttons-pack_600246_4_10"
+  - first:
+      213: 1559027932570368693
+    second: "\u2014Pngtree\u2014wood-style-game-buttons-pack_600246_4_11"
+  - first:
+      213: -5982392618778725073
+    second: "\u2014Pngtree\u2014wood-style-game-buttons-pack_600246_4_12"
+  - first:
+      213: 8364159003927585197
+    second: "\u2014Pngtree\u2014wood-style-game-buttons-pack_600246_4_13"
+  - first:
+      213: 7107136342868929150
+    second: "\u2014Pngtree\u2014wood-style-game-buttons-pack_600246_4_14"
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014wood-style-game-buttons-pack_600246_4_0"
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 982
+        width: 338
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9c97c066ddba2710800000000000000
+      internalID: 1669355340338535582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014wood-style-game-buttons-pack_600246_4_1"
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 983
+        width: 338
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac1a7c266edb70480800000000000000
+      internalID: -8932962538668711478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014wood-style-game-buttons-pack_600246_4_2"
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 982
+        width: 348
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8efd1597d0c18caf0800000000000000
+      internalID: -376019724689874968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014wood-style-game-buttons-pack_600246_4_3"
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 759
+        width: 338
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37c3add7bbb4b3480800000000000000
+      internalID: -8918451368434713485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014wood-style-game-buttons-pack_600246_4_4"
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 759
+        width: 338
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06c2ef1cd9777f6a0800000000000000
+      internalID: -6415527624717751200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014wood-style-game-buttons-pack_600246_4_5"
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 758
+        width: 355
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d3c9782f50c7ed70800000000000000
+      internalID: 9072431489294648272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014wood-style-game-buttons-pack_600246_4_6"
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 533
+        width: 338
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4659dffb62a2aaff0800000000000000
+      internalID: -24160502078925468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014wood-style-game-buttons-pack_600246_4_7"
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 533
+        width: 338
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e47832e528053110800000000000000
+      internalID: 1239906231212602594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014wood-style-game-buttons-pack_600246_4_8"
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 535
+        width: 356
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 463e7e888dbc93570800000000000000
+      internalID: 8447006706980348772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014wood-style-game-buttons-pack_600246_4_9"
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 309
+        width: 338
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbf6785b410b32820800000000000000
+      internalID: 2892348988693376955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014wood-style-game-buttons-pack_600246_4_10"
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 309
+        width: 338
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3326073ae793d0f0800000000000000
+      internalID: -1093363252319608005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014wood-style-game-buttons-pack_600246_4_11"
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 310
+        width: 352
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bab4c305a7c2a510800000000000000
+      internalID: 1559027932570368693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014wood-style-game-buttons-pack_600246_4_12"
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 101
+        width: 338
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2576cafb954afca0800000000000000
+      internalID: -5982392618778725073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014wood-style-game-buttons-pack_600246_4_13"
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 101
+        width: 338
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da12df18c46731470800000000000000
+      internalID: 8364159003927585197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014wood-style-game-buttons-pack_600246_4_14"
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 101
+        width: 360
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7aa8fe39de91a260800000000000000
+      internalID: 7107136342868929150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      "\u2014Pngtree\u2014wood-style-game-buttons-pack_600246_4_0": 1669355340338535582
+      "\u2014Pngtree\u2014wood-style-game-buttons-pack_600246_4_1": -8932962538668711478
+      "\u2014Pngtree\u2014wood-style-game-buttons-pack_600246_4_10": -1093363252319608005
+      "\u2014Pngtree\u2014wood-style-game-buttons-pack_600246_4_11": 1559027932570368693
+      "\u2014Pngtree\u2014wood-style-game-buttons-pack_600246_4_12": -5982392618778725073
+      "\u2014Pngtree\u2014wood-style-game-buttons-pack_600246_4_13": 8364159003927585197
+      "\u2014Pngtree\u2014wood-style-game-buttons-pack_600246_4_14": 7107136342868929150
+      "\u2014Pngtree\u2014wood-style-game-buttons-pack_600246_4_2": -376019724689874968
+      "\u2014Pngtree\u2014wood-style-game-buttons-pack_600246_4_3": -8918451368434713485
+      "\u2014Pngtree\u2014wood-style-game-buttons-pack_600246_4_4": -6415527624717751200
+      "\u2014Pngtree\u2014wood-style-game-buttons-pack_600246_4_5": 9072431489294648272
+      "\u2014Pngtree\u2014wood-style-game-buttons-pack_600246_4_6": -24160502078925468
+      "\u2014Pngtree\u2014wood-style-game-buttons-pack_600246_4_7": 1239906231212602594
+      "\u2014Pngtree\u2014wood-style-game-buttons-pack_600246_4_8": 8447006706980348772
+      "\u2014Pngtree\u2014wood-style-game-buttons-pack_600246_4_9": 2892348988693376955
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

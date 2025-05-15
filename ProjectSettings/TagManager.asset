@@ -11,6 +11,7 @@ TagManager:
   - KeyVictory
   - HealthPotion
   - EnergyPotion
+  - Boss
   layers:
   - Default
   - TransparentFX

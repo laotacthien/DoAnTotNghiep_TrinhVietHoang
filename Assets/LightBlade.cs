@@ -1,12 +1,12 @@
-﻿using UnityEngine;
+using UnityEngine;
 
-public class Arrow : MonoBehaviour
+public class LightBlade : MonoBehaviour
 {
     public float lifetime = 3f;
     private float timer;
     public int damage = 5;
-
     private PlayerAttack playerAttack;
+
     private void Awake()
     {
         playerAttack = FindAnyObjectByType<PlayerAttack>();
@@ -23,8 +23,9 @@ public class Arrow : MonoBehaviour
         {
             ArrowPool.Instance.ReturnToPool(gameObject);
         }
+
     }
-    
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -32,6 +33,7 @@ public class Arrow : MonoBehaviour
             playerAttack.PlayerTakeDamage(damage);
             ArrowPool.Instance.ReturnToPool(gameObject);
         }
+
     }
 
 }
