@@ -21,7 +21,7 @@ public class LightBlade : MonoBehaviour
         timer += Time.deltaTime;
         if (timer >= lifetime)
         {
-            ArrowPool.Instance.ReturnToPool(gameObject);
+            LightBladePool.Instance.ReturnToPool(gameObject);
         }
 
     }

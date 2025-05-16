@@ -62,7 +62,10 @@ public class EnemyShoot : MonoBehaviour
     {
         shooting.ShootBlade();
     }
-
+    public void EnableThunderSpell()
+    {
+        shooting.ShootThunder();
+    }
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.green;

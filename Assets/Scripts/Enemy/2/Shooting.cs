@@ -7,6 +7,8 @@ public class Shooting : MonoBehaviour
     public Transform firePoint;
     public float arrowSpeed = 20f;
 
+    public Transform player;
+
     public void Shoot()
     {
         GameObject arrow = ArrowPool.Instance.GetFromPool();
@@ -35,6 +37,15 @@ public class Shooting : MonoBehaviour
 
         // Xoay hoặc scale nếu cần
         lightBlade.transform.localScale = new Vector3(directionX, 1f, 1f);
+    }
+    public void ShootThunder()
+    {
+        if (player == null) player = GameObject.FindGameObjectWithTag("Player").transform;
+
+        Vector3 targetPos = new Vector3(player.position.x, transform.position.y + 2.3f, 0f); // sấm rơi từ trên xuống
+
+        GameObject thunderSpell = ThunderPool.Instance.GetFromPool();
+        thunderSpell.transform.position = targetPos;
     }
 
 }

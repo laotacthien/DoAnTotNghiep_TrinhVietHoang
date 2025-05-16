@@ -68,7 +68,9 @@
     <Compile Include="Assets\Scripts\EnemyHealthBar.cs" />
     <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\ThunderPool.cs" />
     <Compile Include="Assets\InventoryAssets\Script\ItemUIController.cs" />
+    <Compile Include="Assets\ThunderSpell.cs" />
     <Compile Include="Assets\DontdestroyGameManager.cs" />
     <Compile Include="Assets\ShopManager.cs" />
     <Compile Include="Assets\FloatingText.cs" />
@@ -80,6 +82,7 @@
     <Compile Include="Assets\DontdestroyAudioManager.cs" />
     <Compile Include="Assets\FloatingTextPool.cs" />
     <Compile Include="Assets\AfterImage.cs" />
+    <Compile Include="Assets\BossHealthBar.cs" />
     <Compile Include="Assets\Scripts\Enemy\2\EnemyAttack2.cs" />
     <Compile Include="Assets\Scripts\FinishPoint.cs" />
     <Compile Include="Assets\Scripts\PlayerCollision.cs" />

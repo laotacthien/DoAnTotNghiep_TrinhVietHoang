@@ -13,6 +13,7 @@ public class EnemyHealthBar : MonoBehaviour
 
     [Header("Boss Settings")]
     public Slider bossHPBar; // Slider dành riêng cho Boss
+    
 
     //cập nhật thanh máu enemy
     public void UpdateenemyHPBar(float currentHealth, float maxHealth)
@@ -44,6 +45,8 @@ public class EnemyHealthBar : MonoBehaviour
         }
         
     }
+
+    
 
     // Update is called once per frame
     void Update()
