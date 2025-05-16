@@ -223,7 +223,7 @@ public class PlayerController : MonoBehaviour
             }
             else if (moveInput < 0) 
             {
-                if (Input.GetKey(KeyCode.CapsLock))
+                if (Input.GetKey(KeyCode.LeftShift))
                 {
                     rb.linearVelocity = new Vector2(moveInput * moveSpeed * 2.5f, rb.linearVelocity.y);
                     isRunning = true;
@@ -314,15 +314,20 @@ public class PlayerController : MonoBehaviour
     //tạm thời bỏ qua va chạm với enemy (rigidbody2d)
     void IgnoreEnemyCollisions(bool ignore)
     {
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        foreach (GameObject enemy in enemies)
-        {
-            Collider2D enemyCol = enemy.GetComponent<Collider2D>();
-            Collider2D playerCol = GetComponent<Collider2D>();
+        string[] tagsToIgnore = { "Enemy", "Boss" };
+        Collider2D playerCol = GetComponent<Collider2D>();
 
-            if (enemyCol != null && playerCol != null)
+        foreach (string tag in tagsToIgnore)
+        {
+            GameObject[] enemies = GameObject.FindGameObjectsWithTag(tag);
+            foreach (GameObject enemy in enemies)
             {
-                Physics2D.IgnoreCollision(playerCol, enemyCol, ignore);
+                Collider2D enemyCol = enemy.GetComponent<Collider2D>();
+
+                if (enemyCol != null && playerCol != null)
+                {
+                    Physics2D.IgnoreCollision(playerCol, enemyCol, ignore);
+                }
             }
         }
     }

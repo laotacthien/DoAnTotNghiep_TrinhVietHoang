@@ -72,6 +72,8 @@
     <Compile Include="Assets\InventoryAssets\Script\ItemUIController.cs" />
     <Compile Include="Assets\ThunderSpell.cs" />
     <Compile Include="Assets\DontdestroyGameManager.cs" />
+    <Compile Include="Assets\FireBallPool.cs" />
+    <Compile Include="Assets\FireBall.cs" />
     <Compile Include="Assets\ShopManager.cs" />
     <Compile Include="Assets\FloatingText.cs" />
     <Compile Include="Assets\DontdestroyPlayer.cs" />

@@ -66,6 +66,10 @@ public class EnemyShoot : MonoBehaviour
     {
         shooting.ShootThunder();
     }
+    public void EnableFireBall()
+    {
+        shooting.ShootFireBall();
+    }
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.green;

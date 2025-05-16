@@ -31,7 +31,7 @@ public class LightBlade : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             playerAttack.PlayerTakeDamage(damage);
-            ArrowPool.Instance.ReturnToPool(gameObject);
+            LightBladePool.Instance.ReturnToPool(gameObject);
         }
 
     }

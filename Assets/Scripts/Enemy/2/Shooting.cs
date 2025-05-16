@@ -47,5 +47,22 @@ public class Shooting : MonoBehaviour
         GameObject thunderSpell = ThunderPool.Instance.GetFromPool();
         thunderSpell.transform.position = targetPos;
     }
+    public void ShootFireBall()
+    {
+        if (player == null) player = GameObject.FindGameObjectWithTag("Player").transform;
 
+        
+        GameObject fireBall = FireBallPool.Instance.GetFromPool();
+        fireBall.transform.position = firePoint.position;
+
+        // Tính hướng từ FireBall đến player
+        Vector2 direction = (player.position - transform.position).normalized;
+
+        // vận tốc  FireBall
+        Rigidbody2D rb = fireBall.GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.linearVelocity = direction * arrowSpeed;
+        }
+    }
 }
