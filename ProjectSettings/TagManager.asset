@@ -12,6 +12,7 @@ TagManager:
   - HealthPotion
   - EnergyPotion
   - Boss
+  - Ground
   layers:
   - Default
   - TransparentFX

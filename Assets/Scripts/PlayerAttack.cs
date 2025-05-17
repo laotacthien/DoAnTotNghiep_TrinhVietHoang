@@ -60,26 +60,25 @@ public class PlayerAttack : MonoBehaviour
 
     void Update()
     {
-        if (isKnockback) return; // Nếu đang bị knockback (Hurt), không di chuyển
+        if (isKnockback) return; // nếu đang bị knockback, player sẽ không di chuyển
 
         //Tấn công
-        if (Input.GetKeyDown(KeyCode.J) && canAttack) // Nhấn J để tấn công
+        if (Input.GetKeyDown(KeyCode.J) && canAttack)
         {
-            //Debug.Log($"Bấm tấn công - canAttackAgain: {canAttack}");
             // Reset combo nếu không nhấn trong thời gian cho phép
-
             if (Time.time - lastAttackTime > comboResetTime)
             {
                 comboStep = 0;
             }
-            // Attack();
-
+            
+            //nếu đang đứung trên mặt đất thì tấn công kiểu mặt đất
             if (playerController.isGrounded)
             {
                 Attack();
             }
-            else AirAttack();
+            else AirAttack();  //tấn công kiểu trên không
         }
+        //Skill Trường hồng quán nhật
         HolySlash();
 
         gameManager.UpdateHealthText(currentPlayerHealth);
@@ -88,7 +87,6 @@ public class PlayerAttack : MonoBehaviour
 
         if (holySlashCooldownTimer > 0)
             holySlashCooldownTimer -= Time.deltaTime;
-
     }
 
     //Hàm tấn công
@@ -110,6 +108,7 @@ public class PlayerAttack : MonoBehaviour
         Debug.Log($"Thực hiện chém {comboStep}");
     }
 
+    //tấn công trên không
     void AirAttack()
     {
         canAttack = false;  // Tắt khả năng tấn công liên tục
@@ -128,12 +127,13 @@ public class PlayerAttack : MonoBehaviour
         Debug.Log($"Thực hiện chém trên không {comboStep}");
     }
 
+    //Skill Trường hồng quán nhật
     void HolySlash()
     {
         if (Input.GetKeyDown(KeyCode.U) && holySlashCooldownTimer <= 0)
         {
             holySlash = true;
-            // Kích hoạt animation tương ứng
+            
             animator.SetTrigger("HolySlash");
 
             audioManager.PlayAttackSound();
@@ -145,7 +145,7 @@ public class PlayerAttack : MonoBehaviour
         
     }
     
-    // Hàm này sẽ được gọi bởi Animation Event để kích hoạt hitbox //tấn công đúng tầm
+    // Hàm gọi bởi animation Event để kích hoạt hitbox //tấn công đúng tầm
     public void EnableHitbox()
     {
         // Kiểm tra va chạm với kẻ địch
@@ -177,7 +177,6 @@ public class PlayerAttack : MonoBehaviour
     public void CanAttack()
     {
         canAttack = true; // Cho phép tấn công tiếp
-        Debug.Log("CanAttack() được gọi - có thể tấn công tiếp!");
     }
 
     // Animation Event gọi hàm này ở frame cuối cùng để reset combo
@@ -188,11 +187,6 @@ public class PlayerAttack : MonoBehaviour
 
         animator.ResetTrigger("Attack");
 
-        //animator.ResetTrigger("Attack1");
-        //animator.ResetTrigger("Attack2");
-        //animator.ResetTrigger("Attack3"); // Reset trigger để tránh kẹt animation
-
-        Debug.Log("ResetCombo() được gọi - Reset về trạng thái ban đầu");
     }
 
     void OnDrawGizmosSelected()
@@ -202,27 +196,25 @@ public class PlayerAttack : MonoBehaviour
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 
-    public void PlayerTakeDamage(int damage /*, Transform enemyTransform*/)
+    public void PlayerTakeDamage(int damage)
     {
+        //Player khi nhận sát thương
         currentPlayerHealth -= damage;
         hPBar.UpdateHPBar(currentPlayerHealth, PlayermaxHealth); // cập nhật lại thanh máu
 
-        //animator.SetTrigger("Hit");
-
         if (currentPlayerHealth <= 0)
         {
-            //gameManager.GameOver();
-            FindAnyObjectByType<PlayerRespawn>().Die();
-            
+            //Hết máu sẽ quay lại điểm hồi sinh
+            FindAnyObjectByType<PlayerRespawn>().Die();   
         }
         else
         {
-            ApplyKnockback(/*enemyTransform*/); // Áp dụng knockback
+            ApplyKnockback(); // Áp dụng knockback
         }
     }
 
     // Áp dụng knockback cho player (giống với enemy)
-    private void ApplyKnockback( /*Transform enemyTransform*/ )
+    private void ApplyKnockback()
     {
         isKnockback = true;
         
@@ -252,28 +244,28 @@ public class PlayerAttack : MonoBehaviour
         animator.SetBool("IsKnockBack", false);
     }
 
-    //thêm máu khi nhặt healthpotion
+    //thêm sinh lực khi dùng healthpotion
     public void Heal(int amount)
     {
         currentPlayerHealth += amount;
         animator.SetTrigger("Heal");
-
-        //gameManager.UpdateHPBar(currentPlayerHealth, PlayermaxHealth);  // cập nhật lại thanh máu
-        hPBar.UpdateHPBar(currentPlayerHealth, PlayermaxHealth);
+ 
+        hPBar.UpdateHPBar(currentPlayerHealth, PlayermaxHealth);  // cập nhật lại thanh máu
 
         if (currentPlayerHealth > PlayermaxHealth)
         {
             currentPlayerHealth = PlayermaxHealth; // Giới hạn máu tối đa
         }
-        Debug.Log("Player healed! Current Health: " + currentPlayerHealth);
     }
+
+    //thêm damage khi dùng swordpotion
     public void DamageUp(int amount)
     {
         attackDamage += amount;
         //animator.SetTrigger("DamageUp");
-        if(attackDamage > 60)
+        if(attackDamage > 50)
         {
-            attackDamage = 60; //giới hạn damage tối đa cho đòn tấn công thường
+            attackDamage = 50; //giới hạn damage tối đa cho đòn tấn công thường
         }
     }
 }

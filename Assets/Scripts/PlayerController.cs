@@ -90,32 +90,10 @@ public class PlayerController : MonoBehaviour
         HandleMovement();
         HandleJump();
         UpdateAnimation();
-
         Dash();
         LightCut();
 
-        // Nếu đang Dash thì tạo tàn ảnh định kỳ
-        if (isDashing)
-        {
-            afterImageTimer -= Time.deltaTime;
-            if (afterImageTimer <= 0f)
-            {
-                CreateAfterImage(new Color(0.5f, 0.8f, 1f, 1f));
-                afterImageTimer = afterImageInterval;
-            }
-        }
-
-        //Nếu đang Wall jump thì tạo tàn ảnh định kỳ
-        if (isWallJumping)
-        {
-            afterImageTimer -= Time.deltaTime;
-            if (afterImageTimer <= 0f)
-            {
-                CreateAfterImage(new Color(1f, 0.5f, 0.5f, 0.9f));
-                afterImageTimer = 3 * afterImageInterval;
-            }
-        }
-
+        UpdateAfterImage();
         WallSlide();
         WallJump();
 
@@ -127,18 +105,6 @@ public class PlayerController : MonoBehaviour
         if (lightCutCooldownTimer > 0)
             lightCutCooldownTimer -= Time.deltaTime;
 
-        //Tấn công
-        //if (Input.GetKeyDown(KeyCode.J) && canAttack) // Nhấn J để tấn công
-        //{
-
-        //Debug.Log($"Bấm tấn công - canAttackAgain: {canAttack}");
-        // Reset combo nếu không nhấn trong thời gian cho phép
-        //   if (Time.time - lastAttackTime > comboResetTime)
-        //   {
-        //        comboStep = 0;
-        //    }
-        //    Attack();
-        //}
     }
 
     //Hàm tấn công
@@ -206,18 +172,16 @@ public class PlayerController : MonoBehaviour
 
         if (!isDashing && !isWallJumping)
         {
-            //audioManager.PlayRunSound();
             rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
-
             if (moveInput > 0)
             {
-                if (Input.GetKey(KeyCode.CapsLock))
+                if (Input.GetKey(KeyCode.LeftShift))
                 {
-                    rb.linearVelocity = new Vector2(moveInput * moveSpeed * 3, rb.linearVelocity.y);
+                    rb.linearVelocity = new Vector2(moveInput * moveSpeed * 2.5f, rb.linearVelocity.y);
                     isRunning = true;
                 }
                 else isRunning = false;
-                //audioManager.PlayRunSound();
+                
                 transform.localScale = new Vector3(1, 1, 1);   //spriteRenderer.flipX = false; //lật mới
                 turnRight = true;
             }
@@ -229,13 +193,13 @@ public class PlayerController : MonoBehaviour
                     isRunning = true;
                 }
                 else isRunning = false;
-                //audioManager.PlayRunSound();
+                
                 transform.localScale = new Vector3(-1, 1, 1);  //spriteRenderer.flipX= true;
                 turnRight = false;
             }
         }
     }
-    //private bool holdShift => Input.GetKey(KeyCode.LeftShift);
+    
     private void HandleJump()
     {
         if (Input.GetButtonDown("Jump"))
@@ -264,17 +228,13 @@ public class PlayerController : MonoBehaviour
                 {
                     return;
                 }
-                else
-                {
-                    //audioManager.PlayDashSound();
-                    //rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce * 2f);
-                    StartCoroutine(HighJump());
-                }
+                else StartCoroutine(HighJump());
             }
         }
-
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
     }
+
+    //Skill Bạch nhật phi thăng
     private IEnumerator HighJump()
     {
         animator.SetTrigger("HighJump");
@@ -303,10 +263,8 @@ public class PlayerController : MonoBehaviour
 
                 // Tạm thời bỏ qua va chạm với enemy
                 IgnoreEnemyCollisions(true);
-
                 StartCoroutine(StopDash());
             }
-
             dashUI.TriggerCooldown();
             DashCooldownTimer = DashCooldown;
         }
@@ -340,8 +298,8 @@ public class PlayerController : MonoBehaviour
         // Bật lại va chạm với enemy
         IgnoreEnemyCollisions(false);
     }
-    //Skill lightcut
 
+    //Skill Ảo ảnh trảm
     void LightCut()
     {
         if (Input.GetKeyDown(KeyCode.I) && isGrounded && !isDashing && lightCutCooldownTimer <= 0) // Nhấn i để lghtcut
@@ -374,7 +332,6 @@ public class PlayerController : MonoBehaviour
         IgnoreEnemyCollisions(true);
 
         // 2. Thực hiện dash
-        
         float dashSpeed = 43f;
         float dashTime = 0.2f;
         Vector2 dashDirection = transform.localScale.x > 0 ? Vector2.right : Vector2.left;
@@ -382,7 +339,6 @@ public class PlayerController : MonoBehaviour
         float elapsed = 0f;
         while (elapsed < dashTime)
         {
-
             rb.linearVelocity = dashDirection * dashSpeed;
 
             Collider2D[] hits = Physics2D.OverlapCircleAll(rb.position, 0.5f);
@@ -406,7 +362,6 @@ public class PlayerController : MonoBehaviour
         IgnoreEnemyCollisions(false);
         isLightCutting = false;
         yield return new WaitForSeconds(1f); // hồi chiêu
-        
     }
     public void EndLightCut()
     {
@@ -437,6 +392,30 @@ public class PlayerController : MonoBehaviour
         SpriteRenderer sr = GetComponent<SpriteRenderer>();
         afterImage.GetComponent<AfterImage>().SetData(sr.sprite, !turnRight, color);
 
+    }
+
+    private void UpdateAfterImage()
+    {
+        // nếu đang Dash thì tạo tàn ảnh định kỳ
+        if (isDashing)
+        {
+            afterImageTimer -= Time.deltaTime;
+            if (afterImageTimer <= 0f)
+            {
+                CreateAfterImage(new Color(0.5f, 0.8f, 1f, 1f));
+                afterImageTimer = afterImageInterval;
+            }
+        }
+        // đang Wall jump thì cũng tạo tàn ảnh định kỳ
+        if (isWallJumping)
+        {
+            afterImageTimer -= Time.deltaTime;
+            if (afterImageTimer <= 0f)
+            {
+                CreateAfterImage(new Color(1f, 0.5f, 0.5f, 0.9f));
+                afterImageTimer = 3 * afterImageInterval;
+            }
+        }
     }
 
     private bool IsWalled()  //kiểm tra chạm tường
@@ -510,6 +489,7 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("isDashing", isDashing);
     }
 
+    //thêm năng lượng khi dùng EnergyPotion
     public void HealEnergy(int amount)
     {
         currentPlayerEnergy += amount;

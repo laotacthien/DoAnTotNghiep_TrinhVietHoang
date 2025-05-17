@@ -30,6 +30,7 @@ public class PlayerRespawn : MonoBehaviour
     {
         if (isRespawning) return;
 
+        //nếu còn mạng thì quay lại điểm hồi sinh
         if (gameManager.respawnNumber > 1)
         {
             gameManager.respawnNumber -= 1;
